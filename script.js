@@ -12,10 +12,12 @@ const secretModal = document.querySelector("[data-secret-modal]");
 const secretClose = document.querySelector("[data-secret-close]");
 const secretCountdown = document.querySelector("[data-secret-countdown]");
 const secretCountdownText = document.querySelector("[data-secret-countdown-text]");
+const secretImage = document.querySelector("[data-secret-image]");
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 
+const secretImageUrl = "https://media1.tenor.com/m/zcECT7bfjk8AAAAd/hello-lizard.gif";
 let secretTimer = null;
 
 const closeSecretModal = () => {
@@ -28,6 +30,7 @@ const closeSecretModal = () => {
 
 const openSecretModal = () => {
   let remaining = 10;
+  secretImage.src = secretImageUrl;
   secretModal.hidden = false;
   secretCountdown.textContent = remaining;
   secretCountdownText.textContent = remaining;
