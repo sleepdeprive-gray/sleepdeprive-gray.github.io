@@ -8,9 +8,44 @@ const commandForm = document.querySelector("[data-command-form]");
 const commandInput = commandForm.querySelector("input");
 const commandHistory = document.querySelector("[data-shell-history]");
 const commandStatus = document.querySelector("[data-command-status]");
+const secretModal = document.querySelector("[data-secret-modal]");
+const secretClose = document.querySelector("[data-secret-close]");
+const secretCountdown = document.querySelector("[data-secret-countdown]");
+const secretCountdownText = document.querySelector("[data-secret-countdown-text]");
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
+
+let secretTimer = null;
+
+const closeSecretModal = () => {
+  secretModal.hidden = true;
+  if (secretTimer) {
+    window.clearInterval(secretTimer);
+    secretTimer = null;
+  }
+};
+
+const openSecretModal = () => {
+  let remaining = 10;
+  secretModal.hidden = false;
+  secretCountdown.textContent = remaining;
+  secretCountdownText.textContent = remaining;
+
+  if (secretTimer) {
+    window.clearInterval(secretTimer);
+  }
+
+  secretTimer = window.setInterval(() => {
+    remaining -= 1;
+    secretCountdown.textContent = remaining;
+    secretCountdownText.textContent = remaining;
+
+    if (remaining <= 0) {
+      closeSecretModal();
+    }
+  }, 1000);
+};
 
 const commands = {
   work: {
@@ -39,6 +74,10 @@ const commands = {
       window.location.href = "mailto:ayban.duran@gmail.com";
     },
   },
+  eyah: {
+    output: "secret unlocked",
+    action: openSecretModal,
+  },
   clear: {
     output: "",
     action: () => {
@@ -60,6 +99,8 @@ themeToggle.addEventListener("click", () => {
   root.dataset.theme = nextTheme;
   localStorage.setItem("portfolio-theme", nextTheme);
 });
+
+secretClose.addEventListener("click", closeSecretModal);
 
 copyButton.addEventListener("click", async () => {
   if (navigator.clipboard) {

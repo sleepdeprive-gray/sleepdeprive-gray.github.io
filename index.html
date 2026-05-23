@@ -9,6 +9,25 @@
   </head>
   <body>
     <div class="scanline" aria-hidden="true"></div>
+    <div class="secret-modal" data-secret-modal hidden>
+      <div class="secret-backdrop" data-secret-close></div>
+      <section class="terminal-window secret-dialog" role="dialog" aria-modal="true" aria-labelledby="secret-title">
+        <div class="terminal-topbar">
+          <div class="window-controls" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span class="window-title">eyah.secret</span>
+          <span class="window-status"><span data-secret-countdown>10</span>s</span>
+        </div>
+        <div class="secret-content">
+          <img src="https://media1.tenor.com/m/zcECT7bfjk8AAAAd/hello-lizard.gif" alt="Hello lizard waving">
+          <h2 id="secret-title">Thanks for checking love, lovelots!</h2>
+          <p class="muted">closing in <span data-secret-countdown-text>10</span> seconds</p>
+        </div>
+      </section>
+    </div>
 
     <header class="site-header" data-header>
       <a class="brand" href="#home" aria-label="Ivan Parales Duran home">
