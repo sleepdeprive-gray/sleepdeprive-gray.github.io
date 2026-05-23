@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Command line portfolio of Ivan Parales Duran, a backend-focused full stack developer and aspiring data engineer.">
+    <title>Ivan Parales Duran - CLI Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Ivan Parales Duran home">
+        <span class="prompt-mark">~/portfolio</span>
+        <span>Ivan Parales Duran</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work">work</a>
+        <a href="#projects">projects</a>
+        <a href="#process">process</a>
+        <a href="#experience">experience</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <button class="icon-button" type="button" data-theme-toggle aria-label="Toggle theme">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <main id="home" class="terminal-shell">
+      <section class="terminal-window hero-terminal" aria-labelledby="terminal-title">
+        <div class="terminal-topbar">
+          <div class="window-controls" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span class="window-title">ivan@portfolio:~</span>
+          <span class="window-status">active</span>
+        </div>
+
+        <div class="terminal-grid">
+          <div class="terminal-output">
+            <p class="line muted">$ whoami</p>
+            <h1 id="terminal-title">Ivan Parales Duran</h1>
+            <p class="terminal-copy">
+              Full stack developer focused on backend systems, with a growing path toward data
+              engineering.
+            </p>
+            <div class="command-stack" aria-label="Portfolio commands">
+              <a href="#work"><span>$</span> ls ./stack</a>
+              <a href="#projects"><span>$</span> ls ./projects</a>
+              <a href="#process"><span>$</span> cat process.md</a>
+              <a href="#contact"><span>$</span> ./contact.sh</a>
+            </div>
+          </div>
+
+          <aside class="system-card" aria-label="System status">
+            <div class="image-terminal">
+              <img src="assets/hero-workspace.png" alt="">
+            </div>
+            <dl>
+              <div>
+                <dt>status</dt>
+                <dd>available</dd>
+              </div>
+              <div>
+                <dt>mode</dt>
+                <dd>backend-focused</dd>
+              </div>
+              <div>
+                <dt>stack</dt>
+                <dd>php / react / mysql</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="metrics-row" aria-label="Highlights">
+        <div class="metric">
+          <span class="line muted">education</span>
+          <strong>IT</strong>
+          <span>graduate of information technology</span>
+        </div>
+        <div class="metric">
+          <span class="line muted">focus</span>
+          <strong>backend</strong>
+          <span>focused full stack development direction</span>
+        </div>
+        <div class="metric">
+          <span class="line muted">path</span>
+          <strong>data</strong>
+          <span>aspiring data engineering track</span>
+        </div>
+      </section>
+
+      <section class="terminal-window section" id="work">
+        <div class="terminal-topbar">
+          <span class="window-title">./stack</span>
+          <span class="window-status">known + interested</span>
+        </div>
+        <div class="section-heading">
+          <p class="line muted">$ ls -la tech-stack</p>
+          <h2>Building from interface to database.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured">
+            <p class="project-type">core stack</p>
+            <h3>Full Stack Foundations</h3>
+            <p>
+              Comfortable working across web fundamentals, application logic, scripting, and
+              database-backed features.
+            </p>
+            <div class="tag-row">
+              <span><img src="https://cdn.simpleicons.org/html5/E34F26" alt="">html</span>
+              <span><img src="https://cdn.simpleicons.org/css/663399" alt="">css</span>
+              <span><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="">javascript</span>
+              <span><img src="https://cdn.simpleicons.org/php/777BB4" alt="">php</span>
+              <span><img src="https://cdn.simpleicons.org/python/3776AB" alt="">python</span>
+              <span><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="">mysql</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">mobile / frontend</p>
+            <h3>Application Interfaces</h3>
+            <p>
+              Able to build responsive user-facing screens and mobile app interfaces while keeping
+              backend integration in view.
+            </p>
+            <div class="tag-row">
+              <span><img src="https://cdn.simpleicons.org/react/61DAFB" alt="">react native</span>
+              <span><img src="https://cdn.simpleicons.org/html5/E34F26" alt="">html</span>
+              <span><img src="https://cdn.simpleicons.org/css/663399" alt="">css</span>
+              <span><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="">javascript</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">moderate mastery</p>
+            <h3>Frameworks And Services</h3>
+            <p>
+              Developing practical experience with backend frameworks, utility-first styling, and
+              cloud database tools.
+            </p>
+            <div class="tag-row">
+              <span><img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="">laravel</span>
+              <span><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="">tailwind</span>
+              <span><img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="">supabase</span>
+              <span><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="">firestore</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">interested stack</p>
+            <h3>Mobile And Data Direction</h3>
+            <p>
+              Exploring mobile development and stronger database tooling as part of the path toward
+              backend and data engineering work.
+            </p>
+            <div class="tag-row">
+              <span><img src="https://cdn.simpleicons.org/flutter/02569B" alt="">flutter</span>
+              <span><img src="https://cdn.simpleicons.org/swift/F05138" alt="">swift</span>
+              <span><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="">postgresql</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="terminal-window section" id="projects">
+        <div class="terminal-topbar">
+          <span class="window-title">./projects</span>
+          <span class="window-status">directory</span>
+        </div>
+        <div class="section-heading">
+          <p class="line muted">$ find ./projects -maxdepth 1 -type f</p>
+          <h2>Project directory ready for shipped work.</h2>
+        </div>
+
+        <div class="portfolio-project-grid">
+          <article class="portfolio-project-card">
+            <div>
+              <p class="project-type">backend / api</p>
+              <h3>Backend System</h3>
+              <p>
+                A slot for Laravel, PHP, Python, MySQL, or Supabase work that shows how data moves
+                through the application.
+              </p>
+            </div>
+            <a href="https://github.com/sleepdeprive-gray" rel="noreferrer">view repo</a>
+          </article>
+
+          <article class="portfolio-project-card">
+            <div>
+              <p class="project-type">ojt / backend</p>
+              <h3>Artemis</h3>
+              <p>
+                Worked as one of the backend developers during OJT, then fixed bugs before and
+                after deployment throughout the internship.
+              </p>
+              <div class="project-detail-list">
+                <span>controllers</span>
+                <span>security</span>
+                <span>role-permissions</span>
+                <span>subscription-logic</span>
+              </div>
+            </div>
+            <a href="https://artemis.ph/" rel="noreferrer">view product</a>
+          </article>
+
+          <article class="portfolio-project-card">
+            <div>
+              <p class="project-type">data direction</p>
+              <h3>Data Practice</h3>
+              <p>
+                A slot for PostgreSQL, data modeling, database design, or future data engineering
+                experiments.
+              </p>
+            </div>
+            <a href="https://github.com/sleepdeprive-gray" rel="noreferrer">view repo</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="terminal-window section" id="process">
+        <div class="terminal-topbar">
+          <span class="window-title">process.md</span>
+          <span class="window-status">read-only</span>
+        </div>
+        <div class="section-heading">
+          <p class="line muted">$ cat process.md</p>
+          <h2>Requirements first. Constraints clear. AI assisted.</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step">
+            <span>01</span>
+            <h3>Model</h3>
+            <p>Understand the data, entities, relationships, and backend rules before building.</p>
+          </div>
+          <div class="process-step">
+            <span>02</span>
+            <h3>Build</h3>
+            <p>Create the application logic, interfaces, integrations, and database operations.</p>
+          </div>
+          <div class="process-step">
+            <span>03</span>
+            <h3>Improve</h3>
+            <p>Keep learning toward cleaner backend systems, better data handling, and stronger engineering habits.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal-window section split" id="experience">
+        <div>
+          <div class="terminal-topbar inline-bar">
+            <span class="window-title">profile.log</span>
+            <span class="window-status">tail</span>
+          </div>
+          <div class="section-heading">
+            <p class="line muted">$ tail profile.log</p>
+            <h2>A developer profile moving toward data engineering.</h2>
+          </div>
+        </div>
+
+        <div class="experience-panel">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span>Current</span>
+              <h3>Full Stack Developer</h3>
+              <p>Focused on backend development while staying capable across frontend and mobile interfaces.</p>
+            </div>
+            <div class="timeline-item">
+              <span>Direction</span>
+              <h3>Aspiring Data Engineer</h3>
+              <p>Interested in databases, data flow, backend services, and the systems that move information cleanly.</p>
+            </div>
+            <div class="timeline-item">
+              <span>Education</span>
+              <h3>Information Technology Graduate</h3>
+              <p>Graduate of information technology with a practical software development foundation.</p>
+            </div>
+          </div>
+
+          <div class="skills">
+            <h3>Known stack</h3>
+            <div class="skill-list">
+              <span><img src="https://cdn.simpleicons.org/html5/E34F26" alt="">html</span>
+              <span><img src="https://cdn.simpleicons.org/css/663399" alt="">css</span>
+              <span><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="">javascript</span>
+              <span><img src="https://cdn.simpleicons.org/php/777BB4" alt="">php</span>
+              <span><img src="https://cdn.simpleicons.org/python/3776AB" alt="">python</span>
+              <span><img src="https://cdn.simpleicons.org/react/61DAFB" alt="">react native</span>
+              <span><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="">mysql</span>
+              <span><img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="">laravel</span>
+              <span><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="">tailwind</span>
+              <span><img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="">supabase</span>
+              <span><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="">firestore</span>
+              <span><img src="https://cdn.simpleicons.org/flutter/02569B" alt="">flutter</span>
+              <span><img src="https://cdn.simpleicons.org/swift/F05138" alt="">swift</span>
+              <span><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="">postgresql</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal-window contact-section" id="contact">
+        <div class="terminal-topbar">
+          <span class="window-title">contact.sh</span>
+          <span class="window-status">ready</span>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <p class="line muted">$ ./contact.sh</p>
+            <h2>Let us build something useful.</h2>
+            <p>Reach out for backend-focused full stack work, web apps, mobile interfaces, or data-oriented projects.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="button primary" href="mailto:ayban.duran@gmail.com">email</a>
+            <button class="button secondary" type="button" data-copy-email>copy</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal-window prompt-panel" aria-label="Interactive prompt">
+        <div class="terminal-topbar">
+          <span class="window-title">shell</span>
+          <span class="window-status" data-command-status>idle</span>
+        </div>
+        <div class="shell-history" data-shell-history aria-live="polite">
+          <p><span class="muted">$ help</span></p>
+          <p>commands: work, projects, process, experience, contact, email, clear</p>
+        </div>
+        <form class="prompt-form" data-command-form>
+          <label for="command-input">$</label>
+          <input id="command-input" name="command" type="text" autocomplete="off" spellcheck="false" placeholder="type a command">
+          <button type="submit">run</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-year></span> Ivan Parales Duran</span>
+      <div>
+        <a href="https://www.linkedin.com/in/duran-ivan/" rel="noreferrer">linkedin</a>
+        <a href="https://github.com/sleepdeprive-gray" rel="noreferrer">github</a>
+        <a href="mailto:ayban.duran@gmail.com">email</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
