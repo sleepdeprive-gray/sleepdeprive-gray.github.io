@@ -59,10 +59,6 @@ const commands = {
     target: "#projects",
     output: "listing ./projects",
   },
-  process: {
-    target: "#process",
-    output: "printing process.md",
-  },
   experience: {
     target: "#experience",
     output: "tailing experience.log",
@@ -88,7 +84,7 @@ const commands = {
     },
   },
   help: {
-    output: "commands: work, projects, process, experience, contact, email, clear",
+    output: "commands: work, projects, experience, contact, email, clear",
   },
 };
 
