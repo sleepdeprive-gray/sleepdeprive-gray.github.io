@@ -51,8 +51,8 @@ const openSecretModal = () => {
 };
 
 const commands = {
-  work: {
-    target: "#work",
+  stack: {
+    target: "#stack",
     output: "opening ./stack",
   },
   projects: {
@@ -84,7 +84,7 @@ const commands = {
     },
   },
   help: {
-    output: "commands: work, projects, experience, contact, email, clear",
+    output: "commands: stack, projects, experience, contact, email, clear",
   },
 };
 
