@@ -55,6 +55,10 @@ const commands = {
     target: "#stack",
     output: "opening ./stack",
   },
+  work: {
+    target: "#stack",
+    output: "opening ./stack",
+  },
   projects: {
     target: "#projects",
     output: "listing ./projects",
