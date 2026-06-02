@@ -77,7 +77,7 @@ const commands = {
       window.location.href = "mailto:ayban.duran@gmail.com";
     },
   },
-  eyah: {
+  elie: {
     output: "secret unlocked",
     action: openSecretModal,
   },
