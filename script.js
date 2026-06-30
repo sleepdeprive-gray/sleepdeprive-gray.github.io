@@ -2,6 +2,7 @@ const root = document.documentElement;
 const header = document.querySelector("[data-header]");
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const copyButton = document.querySelector("[data-copy-email]");
+const copyButtonLabel = document.querySelector("[data-copy-email-label]");
 const year = document.querySelector("[data-year]");
 const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
 const commandForm = document.querySelector("[data-command-form]");
@@ -65,7 +66,7 @@ const commands = {
   },
   experience: {
     target: "#experience",
-    output: "tailing experience.log",
+    output: "tailing experiences.log",
   },
   contact: {
     target: "#contact",
@@ -110,9 +111,13 @@ copyButton.addEventListener("click", async () => {
     await navigator.clipboard.writeText("ayban.duran@gmail.com");
   }
 
-  copyButton.textContent = "copied";
+  if (copyButtonLabel) {
+    copyButtonLabel.textContent = "copied email";
+  }
   window.setTimeout(() => {
-    copyButton.textContent = "copy";
+    if (copyButtonLabel) {
+      copyButtonLabel.textContent = "copy email";
+    }
   }, 1400);
 });
 
