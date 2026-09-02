@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Top Circuit Track -->
+  <path d="M 28 22 L 72 22 L 80 14" stroke="#74ff9d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="80" cy="14" r="4.5" fill="#74ff9d"/>
+  <path d="M 62 22 L 74 34" stroke="#74ff9d" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="74" cy="34" r="4.5" fill="#74ff9d"/>
+
+  <!-- Left Chevron / Terminal Prompt Bracket '>' -->
+  <path d="M 28 22 L 48 50 L 28 78" stroke="#74ff9d" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bottom Circuit Track & Node -->
+  <path d="M 28 78 L 76 78 L 76 52 L 54 52" stroke="#74ff9d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 36 78 L 48 64" stroke="#74ff9d" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="48" cy="64" r="4" fill="#74ff9d"/>
+  <circle cx="28" cy="78" r="4" fill="#74ff9d"/>
+  <circle cx="76" cy="78" r="4" fill="#74ff9d"/>
+
+  <!-- Terminal Cursor Underscore -->
+  <rect x="52" y="65" width="16" height="5" rx="2.5" fill="#74ff9d"/>
+</svg>
