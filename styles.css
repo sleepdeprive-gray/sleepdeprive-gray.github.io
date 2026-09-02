@@ -16,23 +16,6 @@
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
-:root[data-theme="light"] {
-  color-scheme: light;
-  --bg: #eef4ee;
-  --surface: #fbfffb;
-  --surface-2: #e2eee6;
-  --ink: #102017;
-  --muted: #526357;
-  --line: rgba(16, 32, 23, 0.18);
-  --accent: #087a42;
-  --accent-2: #006f92;
-  --accent-3: #9a6700;
-  --danger: #b42318;
-  --grid-line: rgba(8, 122, 66, 0.18);
-  --grid-line-strong: rgba(0, 111, 146, 0.13);
-  --shadow: 0 24px 70px rgba(19, 32, 24, 0.14);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -119,11 +102,12 @@ input {
 }
 
 .brand-name {
-  color: var(--ink);
+  color: var(--accent);
   font-weight: 800;
   font-size: 0.95rem;
   letter-spacing: -0.01em;
   transition: color 180ms ease, text-shadow 180ms ease;
+  text-shadow: 0 0 8px color-mix(in srgb, var(--accent) 30%, transparent);
 }
 
 .brand:hover .brand-logo {
@@ -133,7 +117,7 @@ input {
 
 .brand:hover .brand-name {
   color: var(--accent);
-  text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 70%, transparent), 0 0 22px color-mix(in srgb, var(--accent) 45%, transparent);
+  text-shadow: 0 0 12px color-mix(in srgb, var(--accent) 80%, transparent), 0 0 24px color-mix(in srgb, var(--accent) 50%, transparent);
 }
 
 .nav-links {
@@ -163,21 +147,9 @@ input {
   color: var(--ink);
 }
 
-.icon-button {
-  display: grid;
-  width: 40px;
-  height: 40px;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-  color: var(--accent);
-  cursor: pointer;
-}
-
 .terminal-shell {
   width: min(1180px, calc(100% - 36px));
-  margin: 28px auto 0;
+  margin: 18px auto 0;
 }
 
 .terminal-window {
@@ -187,8 +159,6 @@ input {
   background: color-mix(in srgb, var(--surface) 94%, transparent);
   box-shadow: var(--shadow);
 }
-
-
 
 .terminal-topbar {
   display: flex;
@@ -242,7 +212,7 @@ input {
 }
 
 .hero-terminal {
-  min-height: calc(100vh - 112px);
+  min-height: auto;
 }
 
 .terminal-grid {
@@ -255,14 +225,14 @@ input {
 .terminal-output,
 .system-card {
   background: var(--surface);
-  padding: clamp(24px, 5vw, 56px);
+  padding: clamp(20px, 3.5vw, 42px);
 }
 
 .terminal-output {
   display: flex;
-  min-height: 600px;
+  min-height: auto;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .muted {
@@ -285,10 +255,16 @@ h3 {
 }
 
 h1 {
-  max-width: 12ch;
-  margin-top: 10px;
-  font-size: clamp(3rem, 10vw, 7rem);
-  color: var(--ink);
+  max-width: 14ch;
+  margin-top: 6px;
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  color: var(--accent);
+  transition: text-shadow 200ms ease;
+  cursor: default;
+}
+
+h1:hover {
+  text-shadow: 0 0 16px color-mix(in srgb, var(--accent) 75%, transparent), 0 0 32px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 h1::after {
@@ -399,6 +375,23 @@ dt {
 dd {
   margin: 0;
   color: var(--accent);
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  vertical-align: middle;
+  animation: pulseStatus 2s infinite ease-in-out;
+}
+
+@keyframes pulseStatus {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
 }
 
 .metrics-row,

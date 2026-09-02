@@ -1,6 +1,5 @@
 const root = document.documentElement;
 const header = document.querySelector("[data-header]");
-const themeToggle = document.querySelector("[data-theme-toggle]");
 const copyButton = document.querySelector("[data-copy-email]");
 const copyButtonLabel = document.querySelector("[data-copy-email-label]");
 const year = document.querySelector("[data-year]");
@@ -109,14 +108,7 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-const savedTheme = localStorage.getItem("portfolio-theme");
-root.dataset.theme = savedTheme || "dark";
-
-themeToggle?.addEventListener("click", () => {
-  const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-  root.dataset.theme = nextTheme;
-  localStorage.setItem("portfolio-theme", nextTheme);
-});
+root.dataset.theme = "dark";
 
 copyButton?.addEventListener("click", async () => {
   if (navigator.clipboard) {
