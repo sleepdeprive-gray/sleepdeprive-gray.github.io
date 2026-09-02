@@ -6,50 +6,54 @@ const copyButtonLabel = document.querySelector("[data-copy-email-label]");
 const year = document.querySelector("[data-year]");
 const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
 const commandForm = document.querySelector("[data-command-form]");
-const commandInput = commandForm.querySelector("input");
+const commandInput = commandForm?.querySelector("input");
 const commandHistory = document.querySelector("[data-shell-history]");
 const commandStatus = document.querySelector("[data-command-status]");
-const secretModal = document.querySelector("[data-secret-modal]");
-const secretClose = document.querySelector("[data-secret-close]");
-const secretCountdown = document.querySelector("[data-secret-countdown]");
-const secretCountdownText = document.querySelector("[data-secret-countdown-text]");
-const secretImage = document.querySelector("[data-secret-image]");
+
+const cliPanel = document.querySelector("[data-cli-panel]");
+const cliToggle = document.querySelector("[data-cli-toggle]");
+const cliClose = document.querySelector("[data-cli-close]");
+
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 
-const secretImageUrl = "https://media1.tenor.com/m/zcECT7bfjk8AAAAd/hello-lizard.gif";
-let secretTimer = null;
+const openCli = () => {
+  if (!cliPanel) return;
+  cliPanel.hidden = false;
+  cliToggle?.setAttribute("aria-expanded", "true");
+  cliToggle?.classList.add("is-active");
+  commandInput?.focus();
+};
 
-const closeSecretModal = () => {
-  secretModal.hidden = true;
-  if (secretTimer) {
-    window.clearInterval(secretTimer);
-    secretTimer = null;
+const closeCli = () => {
+  if (!cliPanel) return;
+  cliPanel.hidden = true;
+  cliToggle?.setAttribute("aria-expanded", "false");
+  cliToggle?.classList.remove("is-active");
+};
+
+const toggleCli = () => {
+  if (!cliPanel) return;
+  if (cliPanel.hidden) {
+    openCli();
+  } else {
+    closeCli();
   }
 };
 
-const openSecretModal = () => {
-  let remaining = 10;
-  secretImage.src = secretImageUrl;
-  secretModal.hidden = false;
-  secretCountdown.textContent = remaining;
-  secretCountdownText.textContent = remaining;
+cliToggle?.addEventListener("click", toggleCli);
+cliClose?.addEventListener("click", closeCli);
 
-  if (secretTimer) {
-    window.clearInterval(secretTimer);
+// Keyboard shortcut: Press ` (backtick) anywhere to open/close shell, Esc to close
+window.addEventListener("keydown", (e) => {
+  if (e.key === "`" && !["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName)) {
+    e.preventDefault();
+    toggleCli();
+  } else if (e.key === "Escape" && cliPanel && !cliPanel.hidden) {
+    closeCli();
   }
-
-  secretTimer = window.setInterval(() => {
-    remaining -= 1;
-    secretCountdown.textContent = remaining;
-    secretCountdownText.textContent = remaining;
-
-    if (remaining <= 0) {
-      closeSecretModal();
-    }
-  }, 1000);
-};
+});
 
 const commands = {
   stack: {
@@ -78,35 +82,43 @@ const commands = {
       window.location.href = "mailto:ayban.duran@gmail.com";
     },
   },
-  elie: {
-    output: "secret unlocked",
-    action: openSecretModal,
-  },
   clear: {
     output: "",
     action: () => {
-      commandHistory.replaceChildren();
+      commandHistory?.replaceChildren();
+    },
+  },
+  exit: {
+    output: "closing shell",
+    action: () => {
+      window.setTimeout(closeCli, 350);
+    },
+  },
+  close: {
+    output: "closing shell",
+    action: () => {
+      window.setTimeout(closeCli, 350);
     },
   },
   help: {
-    output: "commands: stack, projects, experience, contact, email, clear",
+    output: "commands: stack, projects, experience, contact, email, clear, exit",
   },
 };
 
-year.textContent = new Date().getFullYear();
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
 const savedTheme = localStorage.getItem("portfolio-theme");
 root.dataset.theme = savedTheme || "dark";
 
-themeToggle.addEventListener("click", () => {
+themeToggle?.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
   root.dataset.theme = nextTheme;
   localStorage.setItem("portfolio-theme", nextTheme);
 });
 
-secretClose.addEventListener("click", closeSecretModal);
-
-copyButton.addEventListener("click", async () => {
+copyButton?.addEventListener("click", async () => {
   if (navigator.clipboard) {
     await navigator.clipboard.writeText("ayban.duran@gmail.com");
   }
@@ -122,6 +134,7 @@ copyButton.addEventListener("click", async () => {
 });
 
 const appendHistory = (text, muted = false) => {
+  if (!commandHistory) return;
   const line = document.createElement("p");
   if (muted) {
     line.className = "muted";
@@ -131,9 +144,10 @@ const appendHistory = (text, muted = false) => {
   commandHistory.scrollTop = commandHistory.scrollHeight;
 };
 
-commandForm.addEventListener("submit", (event) => {
+commandForm?.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  if (!commandInput) return;
   const rawCommand = commandInput.value.trim().toLowerCase();
   if (!rawCommand) {
     return;
@@ -145,11 +159,11 @@ commandForm.addEventListener("submit", (event) => {
 
   if (!command) {
     appendHistory(`command not found: ${rawCommand}`);
-    commandStatus.textContent = "error";
+    if (commandStatus) commandStatus.textContent = "error";
     return;
   }
 
-  commandStatus.textContent = "running";
+  if (commandStatus) commandStatus.textContent = "running";
   command.action?.();
 
   if (command.output) {
@@ -157,18 +171,18 @@ commandForm.addEventListener("submit", (event) => {
   }
 
   if (command.target) {
-    document.querySelector(command.target).scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector(command.target)?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   window.setTimeout(() => {
-    commandStatus.textContent = "idle";
+    if (commandStatus) commandStatus.textContent = "idle";
   }, 500);
 });
 
 const setActiveLink = () => {
-  const offset = header.offsetHeight + 32;
+  const offset = header ? header.offsetHeight + 32 : 32;
   const current = sections.reduce((activeSection, section) => {
-    return section.offsetTop - offset <= window.scrollY ? section : activeSection;
+    return section && section.offsetTop - offset <= window.scrollY ? section : activeSection;
   }, null);
 
   navLinks.forEach((link) => {
