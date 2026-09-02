@@ -959,10 +959,15 @@ dd {
     grid-row: auto;
   }
 
+  .timeline-strip {
+    padding: 14px 8px;
+    gap: 12px;
+  }
+
   .timeline-strip::before {
-    top: 42px;
-    bottom: 42px;
-    left: 26px;
+    top: 36px;
+    bottom: 36px;
+    left: 20px;
     transform: none;
   }
 
@@ -973,11 +978,13 @@ dd {
   }
 
   .timeline-dot {
-    left: 26px;
+    left: 20px;
+    width: 14px;
+    height: 14px;
   }
 
   .timeline-node::before {
-    left: 26px;
+    left: 20px;
     transform: none;
   }
 
@@ -986,14 +993,20 @@ dd {
     grid-column: 1;
     justify-items: start;
     text-align: left;
-    margin-left: 52px;
+    margin-left: 42px;
     margin-right: 0;
+    width: calc(100% - 42px);
+    max-width: none;
   }
 }
 
 @media (max-width: 560px) {
   .brand span:last-child {
     display: none;
+  }
+
+  .section-heading {
+    margin-bottom: 20px;
   }
 
   .terminal-topbar {
@@ -1018,6 +1031,50 @@ dd {
 
   .tag-row span {
     min-width: 0;
+  }
+
+  .timeline-strip {
+    padding: 4px 0;
+    gap: 10px;
+    border: none;
+    background: transparent;
+  }
+
+  .timeline-dot {
+    left: 14px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-node::before {
+    left: 14px;
+    width: 2px;
+  }
+
+  .timeline-node {
+    padding: 2px 0;
+  }
+
+  .timeline-node.above .timeline-card,
+  .timeline-node.below .timeline-card {
+    margin-left: 32px;
+    width: calc(100% - 32px);
+    padding: 12px 14px;
+    gap: 4px;
+  }
+
+  .timeline-card h3 {
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
+  .timeline-card p {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .timeline-date {
+    font-size: 0.72rem;
   }
 
   .prompt-form {
@@ -1052,9 +1109,5 @@ dd {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .timeline-card p {
-    font-size: 0.76rem;
   }
 }
