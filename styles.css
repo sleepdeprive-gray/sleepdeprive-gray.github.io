@@ -611,6 +611,46 @@ dd {
   transform: translateY(0);
 }
 
+.placeholder-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background:
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 72%),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-strong) 1px, transparent 1px),
+    var(--surface);
+  background-size: auto, 22px 22px, 22px 22px, auto;
+  text-align: center;
+}
+
+.placeholder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-family: var(--mono);
+  transition: border-color 160ms ease, transform 160ms ease, color 160ms ease;
+}
+
+.placeholder-badge span {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.project-preview-wrap:hover .placeholder-badge {
+  border-color: var(--accent);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
 .project-card-body {
   display: flex;
   flex-direction: column;
@@ -665,33 +705,123 @@ dd {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-}
-
-.tag-row {
   margin-top: 22px;
 }
 
-.tag-row span {
+.tag-row .skill-badge {
+  position: relative;
   display: inline-flex;
   min-width: 96px;
-  min-height: 86px;
+  min-height: 88px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 8px;
   padding: 12px 10px;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 92%, black);
   color: var(--accent-2);
   font-size: 0.76rem;
   font-weight: 800;
   text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
 }
 
-.tag-row img {
-  width: 38px;
-  height: 38px;
+.tag-row .skill-badge:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--accent) 26%, transparent);
+  transform: translateY(-3px);
+}
+
+.tag-row .liquid-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--accent) 35%, transparent) 0%,
+    color-mix(in srgb, var(--accent) 65%, var(--surface-2)) 100%
+  );
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 60%, transparent);
+  transition: height 520ms cubic-bezier(0.2, 0.9, 0.25, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tag-row .liquid-fill::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -50%;
+  width: 200%;
+  height: 12px;
+  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--accent) 80%, white) 0%, transparent 70%);
+  opacity: 0.65;
+  animation: wavePulse 2.4s ease-in-out infinite;
+}
+
+.tag-row .skill-badge:hover .liquid-fill {
+  height: var(--level, 80%);
+}
+
+.tag-row .skill-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  transition: transform 220ms ease;
+}
+
+.tag-row .skill-badge:hover .skill-content {
+  transform: scale(1.04);
+}
+
+.tag-row .skill-badge img {
+  width: 36px;
+  height: 36px;
   flex: 0 0 auto;
+  transition: filter 220ms ease;
+}
+
+.tag-row .skill-percent {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 3;
+  padding: 1px 5px;
+  border: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--surface) 92%, black);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  transform: translateY(-4px) scale(0.9);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+}
+
+.tag-row .skill-badge:hover .skill-percent {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@keyframes wavePulse {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(15%); }
 }
 
 .split {
@@ -1156,10 +1286,13 @@ dd {
   .tag-row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 
-  .tag-row span {
+  .tag-row .skill-badge {
     min-width: 0;
+    min-height: 80px;
+    padding: 10px 8px;
   }
 
   .timeline-strip {
