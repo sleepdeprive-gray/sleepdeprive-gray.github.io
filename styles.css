@@ -546,9 +546,37 @@ dd {
   transition: opacity 160ms ease, transform 160ms ease;
 }
 
+.preview-status-hint {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-family: var(--mono);
+  opacity: 0.75;
+}
+
 .project-preview-wrap:hover .preview-link-hint {
   opacity: 1;
   transform: translateX(2px);
+}
+
+.project-preview-wrap.is-static {
+  cursor: default;
+}
+
+.project-preview-wrap.is-static:hover {
+  border-color: var(--line);
+  box-shadow: none;
+  transform: none;
+}
+
+.project-preview-wrap.is-static:hover .preview-browser-bar {
+  background: var(--surface-2);
+}
+
+.project-preview-wrap.is-static:hover .placeholder-badge {
+  border-color: var(--line);
+  color: var(--muted);
+  transform: none;
 }
 
 .preview-img-container {
