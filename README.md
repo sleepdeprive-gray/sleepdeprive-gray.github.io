@@ -35,9 +35,10 @@
 
 ## 📜 Experience
 
-- **2022 – 2026** — BS in Information Technology
+- **2022 – 2026** — BS in Information Technology *(Cum Laude)*
 - **Nov 2025 – Jun 2026** — Project Head at OITS *(CSG Imus Campus)*
 - **Mar 2026 – May 2026** — Full Stack Developer Intern at Meta Digitrading Enterprise Co.
+- **Jun 2026 – Present** — Independent Projects & Certifications *(Cisco & Related Certification Bodies)*
 
 ---
 
