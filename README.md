@@ -20,12 +20,13 @@
 
 - **Languages & Databases**: PHP, MySQL, JavaScript, Python, HTML, CSS
 - **Frameworks & Tools**: React, Laravel, TailwindCSS, Supabase, Firestore
+- **Leadership & Management**: ClickUp, GitHub, Postman, Technical PRDs & Docs, Agile Delivery, QA Testing, Stakeholder Alignment
 
 ---
 
 ## 📁 Projects
 
-- **[OITS](https://csg-oits.vercel.app/)** — Online Information & Transparency System *(Project Manager / QA)*
+- **[OITS](https://csg-oits.vercel.app/)** — Online Information & Transparency System *(Project Head / QA)*
 - **[Artemis](https://artemis.ph/)** — SaaS Web Application *(Internship / Backend & Full Stack)*
 - **[iTrack Async](https://github.com/sleepdeprive-gray/iTrack-Async)** — System Tracking & Management *(Project Head / Full Stack)*
 - **[Nemo](https://nemo-v1.netlify.app/)** — Cloud Storage Solution *(Open Source)*
@@ -48,9 +49,10 @@ The portfolio features a built-in terminal shell. Press `` ` `` (backtick) or cl
 
 | Command | Action |
 | :--- | :--- |
-| `stack` | Jump to tech stack |
+| `stack` | Jump to tech stack & leadership |
 | `projects` | Jump to projects |
 | `experience` | Jump to experience |
+| `pm` | Jump to project leadership & competencies |
 | `contact` | Jump to contact |
 | `email` | Open email client |
 | `clear` | Clear terminal output |

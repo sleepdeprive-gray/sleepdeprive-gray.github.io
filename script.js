@@ -99,8 +99,20 @@ const commands = {
       window.setTimeout(closeCli, 350);
     },
   },
+  pm: {
+    target: "#stack",
+    output: "viewing ./pm-competencies.log",
+  },
+  leadership: {
+    target: "#stack",
+    output: "viewing ./pm-competencies.log",
+  },
+  management: {
+    target: "#stack",
+    output: "viewing ./pm-competencies.log",
+  },
   help: {
-    output: "commands: stack, projects, experience, contact, email, clear, exit",
+    output: "commands: stack, projects, experience, pm, contact, email, clear, exit",
   },
 };
 
