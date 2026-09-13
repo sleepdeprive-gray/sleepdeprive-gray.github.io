@@ -232,7 +232,7 @@ input {
   display: flex;
   min-height: auto;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .muted {
@@ -1249,7 +1249,7 @@ dd {
   }
 
   .terminal-output {
-    min-height: 460px;
+    min-height: auto;
   }
 
   .project-card.featured {
