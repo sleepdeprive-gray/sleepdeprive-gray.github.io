@@ -1198,17 +1198,33 @@ dd {
 }
 
 .shell-history {
-  display: grid;
-  min-height: 80px;
-  max-height: 220px;
+  display: flex;
+  flex-direction: column;
+  min-height: 90px;
+  max-height: 240px;
   overflow-y: auto;
-  align-content: end;
   gap: 6px;
   padding: 14px;
 }
 
 .shell-history p {
   margin: 0;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.line[data-exec] {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-left: -6px;
+  transition: color 150ms ease, background 150ms ease;
+}
+
+.line[data-exec]:hover {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
 .prompt-form {
@@ -1246,7 +1262,7 @@ dd {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  z-index: 45;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

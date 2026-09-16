@@ -10,6 +10,7 @@
     <a href="https://sleepdeprive-gray.github.io/">Live Portfolio</a> ·
     <a href="https://github.com/sleepdeprive-gray">GitHub</a> ·
     <a href="https://www.linkedin.com/in/duran-ivan/">LinkedIn</a> ·
+    <a href="https://wa.me/639919048089">WhatsApp</a> ·
     <a href="mailto:ayban.duran@gmail.com">Email</a>
   </p>
 </div>
@@ -55,6 +56,7 @@ The portfolio features a built-in terminal shell. Press `` ` `` (backtick) or cl
 | `pm` | Jump to project leadership & competencies |
 | `contact` | Jump to contact |
 | `email` | Open email client |
+| `whatsapp` | Open WhatsApp chat |
 | `clear` | Clear terminal output |
 | `exit` | Close terminal |
 

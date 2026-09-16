@@ -38,7 +38,7 @@
 
         <div class="terminal-grid">
           <div class="terminal-output">
-            <p class="line muted">$ whoami</p>
+            <p class="line muted" data-exec="whoami">$ whoami</p>
             <h1 id="terminal-title">Ivan Parales Duran</h1>
             <p class="terminal-copy">
               Full stack developer &amp; project lead experienced in backend systems, agile delivery, requirements planning, and end-to-end software management.
@@ -73,7 +73,7 @@
           <span class="window-status">skills &amp; leadership</span>
         </div>
         <div class="section-heading">
-          <p class="line muted">$ ls -la tech-stack &amp;&amp; cat leadership.md</p>
+          <p class="line muted" data-exec="stack">$ ls -la tech-stack &amp;&amp; cat leadership.md</p>
           <h2>Engineering systems &amp; leading delivery.</h2>
         </div>
 
@@ -225,10 +225,10 @@
 
           <article class="project-card">
             <p class="project-type">leadership &amp; management</p>
-            <h3>Project Head &amp; Delivery</h3>
+            <h3>Product Leadership &amp; Tooling</h3>
             <p>
-              Leading software projects through agile sprints, requirements analysis, QA validation,
-              and cross-functional stakeholder alignment.
+              Driving product strategy from concept to release with structured workflows, agile tracking,
+              and cross-functional alignment.
             </p>
             <div class="tag-row">
               <span class="skill-badge" style="--level: 95%;">
@@ -267,9 +267,9 @@
           </article>
         </div>
 
-        <div class="management-matrix-panel">
+        <div class="management-matrix-panel" id="pm-competencies">
           <div class="matrix-header">
-            <p class="line muted">$ cat ./pm-competencies.log</p>
+            <p class="line muted" data-exec="pm">$ cat ./pm-competencies.log</p>
             <h3>Leadership &amp; Delivery Competencies</h3>
             <p class="matrix-desc">
               Bridging technical architecture and project execution to deliver maintainable software on schedule.
@@ -287,13 +287,13 @@
                     <line x1="3" y1="10" x2="21" y2="10"></line>
                   </svg>
                 </span>
-                <h4>Agile &amp; Sprint Planning</h4>
+                <h4>Agile Orchestration &amp; Roadmapping</h4>
               </div>
-              <p>Leading sprints, backlog grooming, timeline estimation, and blocker resolution to ensure milestones are consistently met.</p>
+              <p>Facilitating sprint cycles, backlog prioritization, timeline forecasting, and blocker removal to keep delivery velocity high.</p>
               <div class="capability-tags">
-                <span>sprint planning</span>
-                <span>scope management</span>
-                <span>milestone tracking</span>
+                <span>sprint cycles</span>
+                <span>backlog grooming</span>
+                <span>milestone delivery</span>
               </div>
             </div>
 
@@ -308,13 +308,13 @@
                     <polyline points="10 9 9 9 8 9"></polyline>
                   </svg>
                 </span>
-                <h4>Requirements &amp; Technical Specs</h4>
+                <h4>Technical Scoping &amp; PRDs</h4>
               </div>
-              <p>Translating organizational and user needs into clear database schemas, feature requirements, PRDs, and workflow maps.</p>
+              <p>Authoring actionable product specs, user workflow diagrams, schema models, and feature acceptance criteria for developers.</p>
               <div class="capability-tags">
-                <span>requirements analysis</span>
-                <span>technical prds</span>
-                <span>database schemas</span>
+                <span>prds &amp; rfc docs</span>
+                <span>schema design</span>
+                <span>user workflows</span>
               </div>
             </div>
 
@@ -326,13 +326,13 @@
                     <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
                   </svg>
                 </span>
-                <h4>QA, Testing &amp; Code Review</h4>
+                <h4>Quality Assurance &amp; Code Review</h4>
               </div>
-              <p>Guiding QA verification, test plan design, functional testing, code reviews, and deployment readiness checks.</p>
+              <p>Designing structured test plans, validating API endpoints via Postman, conducting PR reviews, and enforcing release criteria.</p>
               <div class="capability-tags">
-                <span>qa validation</span>
+                <span>api testing</span>
                 <span>code reviews</span>
-                <span>system testing</span>
+                <span>uat validation</span>
               </div>
             </div>
 
@@ -346,13 +346,13 @@
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                 </span>
-                <h4>Stakeholder &amp; Team Coordination</h4>
+                <h4>Cross-Functional Alignment</h4>
               </div>
-              <p>Facilitating communication across student government leaders, development teams, and clients for project transparency.</p>
+              <p>Synchronizing stakeholders, clients, and technical teams with transparent communication, executive updates, and risk mitigation.</p>
               <div class="capability-tags">
                 <span>stakeholder syncs</span>
-                <span>team leadership</span>
-                <span>transparency</span>
+                <span>dev unblocking</span>
+                <span>risk mitigation</span>
               </div>
             </div>
           </div>
@@ -365,7 +365,7 @@
           <span class="window-status">directory</span>
         </div>
         <div class="section-heading">
-          <p class="line muted">$ find ./projects -maxdepth 1 -type f</p>
+          <p class="line muted" data-exec="projects">$ find ./projects -maxdepth 1 -type f</p>
           <h2>Projects and contributions.</h2>
         </div>
 
@@ -528,7 +528,7 @@
         </div>
 
         <div class="section-heading">
-          <p class="line muted">$ cat experiences.log</p>
+          <p class="line muted" data-exec="experience">$ cat experiences.log</p>
           <h2>Experiences and milestones.</h2>
         </div>
 
@@ -576,13 +576,15 @@
       <section class="terminal-window contact-section" id="contact">
         <div class="terminal-topbar">
           <span class="window-title">contact.sh</span>
-          <span class="window-status">ready</span>
+          <span class="window-status">available</span>
         </div>
         <div class="contact-grid">
           <div>
-            <p class="line muted">$ ./contact.sh</p>
-            <h2>Let us build something useful.</h2>
-            <p>Reach out for full stack work, web applications, or API development projects.</p>
+            <p class="line muted" data-exec="contact">$ ./contact.sh --status=available</p>
+            <h2>Let us build reliable software &amp; lead delivery.</h2>
+            <p>
+              Open for full-time full stack &amp; backend roles, technical project management, or collaborative software projects. Reach out via email or WhatsApp (+639919048089).
+            </p>
           </div>
           <div class="contact-actions">
             <a class="button primary" href="mailto:ayban.duran@gmail.com">
@@ -591,12 +593,6 @@
               </svg>
               <span>send an email</span>
             </a>
-            <button class="button secondary" type="button" data-copy-email>
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M8 3.75A1.75 1.75 0 0 1 9.75 2h8.5A1.75 1.75 0 0 1 20 3.75v11.5A1.75 1.75 0 0 1 18.25 17h-8.5A1.75 1.75 0 0 1 8 15.25V3.75Zm1.5-.25v12h9v-12h-9ZM4 7.75A1.75 1.75 0 0 1 5.75 6H7v1.5H5.5v12h9V18h1.5v1.25A1.75 1.75 0 0 1 14.25 21h-8.5A1.75 1.75 0 0 1 4 19.25V7.75Z"></path>
-              </svg>
-              <span data-copy-email-label>copy email</span>
-            </button>
           </div>
         </div>
       </section>
@@ -605,6 +601,12 @@
     <footer class="site-footer">
       <span>© <span data-year></span> Ivan Parales Duran</span>
       <div>
+        <a href="https://wa.me/639919048089" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"></path>
+          </svg>
+          <span>whatsapp</span>
+        </a>
         <a href="https://www.linkedin.com/in/duran-ivan/" rel="noreferrer">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M4.98 3.5A2.48 2.48 0 1 1 5 8.46a2.48 2.48 0 0 1-.02-4.96ZM3.5 9.7h3V20h-3V9.7Zm5 0h2.88v1.4h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.58V20h-3v-5.2c0-1.24-.02-2.84-1.74-2.84-1.74 0-2.01 1.36-2.01 2.75V20h-3V9.7Z"></path>
