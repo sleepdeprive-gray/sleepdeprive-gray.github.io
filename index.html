@@ -431,20 +431,21 @@
           </article>
 
           <article class="portfolio-project-card">
-            <div class="project-preview-wrap is-static" aria-label="iTrack Async project preview">
+            <a href="https://itrack-async.alwaysdata.net/" class="project-preview-wrap" target="_blank" rel="noreferrer" aria-label="Visit iTrack Async website">
               <div class="preview-browser-bar">
                 <span class="preview-dot dot-red"></span>
                 <span class="preview-dot dot-yellow"></span>
                 <span class="preview-dot dot-green"></span>
-                <span class="preview-url">github.com/sleepdeprive-gray/iTrack-Async</span>
-                <span class="preview-status-hint">no live site</span>
+                <span class="preview-url">itrack-async.alwaysdata.net</span>
+                <span class="preview-link-hint">visit ↗</span>
               </div>
-              <div class="preview-img-container placeholder-preview">
-                <div class="placeholder-badge">
-                  <span>$</span> itrack-async.git
+              <div class="preview-img-container">
+                <img src="assets/itrack-async.PNG" alt="iTrack Async Website Preview" class="project-preview-img" loading="lazy">
+                <div class="preview-overlay">
+                  <span>open website ↗</span>
                 </div>
               </div>
-            </div>
+            </a>
             <div class="project-card-body">
               <p class="project-type">project head / full stack developer</p>
               <h3>iTrack Async</h3>
@@ -629,6 +630,7 @@
     </footer>
 
     <!-- Floating Terminal CLI Widget -->
+    <div class="floating-cli-backdrop" data-cli-backdrop hidden></div>
     <div class="floating-cli" data-cli>
       <div class="floating-cli-panel" data-cli-panel hidden>
         <div class="terminal-window floating-cli-window" aria-label="Interactive prompt">
@@ -641,13 +643,19 @@
             <span class="window-title">ivan@portfolio:~/shell</span>
             <span class="window-status" data-command-status>idle</span>
           </div>
-          <div class="shell-history" data-shell-history aria-live="polite">
-            <p><span class="muted">$ help</span></p>
-            <p class="muted">commands: stack, projects, experience, pm, contact, email, clear, exit</p>
+          <div class="shell-history" data-shell-history aria-live="polite"></div>
+          <div class="shell-quick-commands" aria-label="Quick command shortcuts">
+            <span class="quick-label">quick:</span>
+            <button type="button" class="quick-cmd-btn" data-quick-cmd="projects">projects</button>
+            <button type="button" class="quick-cmd-btn" data-quick-cmd="stack">stack</button>
+            <button type="button" class="quick-cmd-btn" data-quick-cmd="pm">pm</button>
+            <button type="button" class="quick-cmd-btn" data-quick-cmd="contact">contact</button>
+            <button type="button" class="quick-cmd-btn" data-quick-cmd="clear">clear</button>
+            <button type="button" class="quick-cmd-btn quick-exit" data-quick-cmd="exit">exit</button>
           </div>
           <form class="prompt-form" data-command-form>
             <label for="command-input">$</label>
-            <input id="command-input" name="command" type="text" autocomplete="off" spellcheck="false" placeholder="type a command">
+            <input id="command-input" name="command" type="text" autocomplete="off" spellcheck="false" placeholder="type a command (or tap above)">
             <button type="submit">run</button>
           </form>
         </div>
@@ -655,7 +663,7 @@
 
       <button class="floating-cli-toggle" type="button" data-cli-toggle aria-label="Toggle terminal shell" aria-expanded="false">
         <span class="prompt-symbol" aria-hidden="true">&gt;_</span>
-        <span>terminal</span>
+        <span class="toggle-text">terminal</span>
       </button>
     </div>
 

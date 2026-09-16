@@ -11,7 +11,9 @@ const commandStatus = document.querySelector("[data-command-status]");
 
 const cliPanel = document.querySelector("[data-cli-panel]");
 const cliToggle = document.querySelector("[data-cli-toggle]");
-const cliClose = document.querySelector("[data-cli-close]");
+const cliToggleText = cliToggle?.querySelector(".toggle-text");
+const cliBackdrop = document.querySelector("[data-cli-backdrop]");
+const cliCloseButtons = document.querySelectorAll("[data-cli-close]");
 
 const sections = navLinks
   .map((link) => {
@@ -23,24 +25,51 @@ const sections = navLinks
 // --- Terminal State & Controls ---
 let commandHistoryList = [];
 let historyCursor = -1;
+let isCliClosing = false;
 
 const openCli = () => {
   if (!cliPanel) return;
+  if (isCliClosing) return;
+  cliPanel.classList.remove("is-closing");
+  cliBackdrop?.classList.remove("is-closing");
   cliPanel.hidden = false;
   cliPanel.removeAttribute("hidden");
+  if (cliBackdrop) {
+    cliBackdrop.hidden = false;
+    cliBackdrop.removeAttribute("hidden");
+  }
   cliToggle?.setAttribute("aria-expanded", "true");
   cliToggle?.classList.add("is-active");
+  if (cliToggleText) {
+    cliToggleText.textContent = "close";
+  }
   window.setTimeout(() => {
     commandInput?.focus();
   }, 60);
 };
 
 const closeCli = () => {
-  if (!cliPanel) return;
-  cliPanel.hidden = true;
-  cliPanel.setAttribute("hidden", "");
+  if (!cliPanel || cliPanel.hidden || isCliClosing) return;
+  isCliClosing = true;
+  cliPanel.classList.add("is-closing");
+  cliBackdrop?.classList.add("is-closing");
   cliToggle?.setAttribute("aria-expanded", "false");
   cliToggle?.classList.remove("is-active");
+  if (cliToggleText) {
+    cliToggleText.textContent = "terminal";
+  }
+
+  window.setTimeout(() => {
+    cliPanel.hidden = true;
+    cliPanel.setAttribute("hidden", "");
+    cliPanel.classList.remove("is-closing");
+    if (cliBackdrop) {
+      cliBackdrop.hidden = true;
+      cliBackdrop.setAttribute("hidden", "");
+      cliBackdrop.classList.remove("is-closing");
+    }
+    isCliClosing = false;
+  }, 170);
 };
 
 const toggleCli = () => {
@@ -58,7 +87,14 @@ cliToggle?.addEventListener("click", (e) => {
   toggleCli();
 });
 
-cliClose?.addEventListener("click", (e) => {
+cliCloseButtons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeCli();
+  });
+});
+
+cliBackdrop?.addEventListener("click", (e) => {
   e.preventDefault();
   closeCli();
 });
@@ -115,6 +151,7 @@ commandInput?.addEventListener("keydown", (e) => {
       "clear",
       "exit",
       "ls",
+      "itrack",
       "github",
       "linkedin"
     ];
@@ -318,6 +355,18 @@ const commands = {
       window.open("https://www.linkedin.com/in/duran-ivan/", "_blank");
     },
   },
+  itrack: {
+    output: "opening https://itrack-async.alwaysdata.net/",
+    action: () => {
+      window.open("https://itrack-async.alwaysdata.net/", "_blank");
+    },
+  },
+  "itrack-async": {
+    output: "opening https://itrack-async.alwaysdata.net/",
+    action: () => {
+      window.open("https://itrack-async.alwaysdata.net/", "_blank");
+    },
+  },
   date: {
     output: `system time: ${new Date().toLocaleString()}`,
   },
@@ -406,6 +455,14 @@ const executeCommand = (rawInput) => {
     scrollToTarget(command.target);
   }
 
+  // Auto-close terminal popup on running a valid command (except clear or help)
+  const keepOpenCommands = ["clear", "cls", "help", "?"];
+  if (!keepOpenCommands.includes(normalized)) {
+    window.setTimeout(() => {
+      closeCli();
+    }, 220);
+  }
+
   window.setTimeout(() => {
     if (commandStatus) commandStatus.textContent = "idle";
   }, 400);
@@ -415,6 +472,17 @@ commandForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!commandInput) return;
   executeCommand(commandInput.value);
+});
+
+// Quick command shortcut buttons (for mobile / fast-tap interaction)
+document.querySelectorAll("[data-quick-cmd]").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const cmd = btn.getAttribute("data-quick-cmd");
+    if (cmd) {
+      executeCommand(cmd);
+    }
+  });
 });
 
 // Allow clicking on any prompt across the site (e.g. $ whoami, $ cat ./pm-competencies.log)
