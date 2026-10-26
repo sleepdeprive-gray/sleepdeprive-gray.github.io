@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem("ivan_portfolio_theme") || "dark";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
   </head>
   <body>
 
@@ -105,10 +111,10 @@
       <section class="editorial-section">
         <!-- Hero Banner -->
         <div class="discipline-hero-banner">
-          <span class="section-kicker">Discipline 04</span>
+          <span class="section-kicker">Core Competency 04</span>
           <h1 class="discipline-page-title">Sales &amp; Marketing</h1>
           <p class="discipline-page-summary">
-            Connecting software solutions to business value through technical pre-sales, product positioning, and data-driven growth.
+            Specialized growth channels, affiliate revenue systems, visual generative AI, and high-converting blog &amp; store websites.
           </p>
         </div>
 
@@ -117,31 +123,31 @@
           <h2 class="block-heading">Sales &amp; Marketing Projects</h2>
           <div class="editorial-projects-grid">
             <article class="editorial-project-card">
-              <a href="https://artemis.ph/" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit Artemis Platform Positioning">
+              <a href="https://artemis.ph/" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit Pinterest & Affiliate Funnel Platform">
                 <div class="project-img-frame">
-                  <img src="assets/artemis.PNG" alt="Artemis GTM Campaign" loading="lazy">
-                  <div class="project-hover-overlay"><span>Product Positioning ↗</span></div>
+                  <img src="assets/artemis.PNG" alt="Pinterest & Amazon Associate Affiliate Engine" loading="lazy">
+                  <div class="project-hover-overlay"><span>Affiliate Engine ↗</span></div>
                 </div>
               </a>
               <div class="project-info-under">
-                <h3 class="project-card-title">Artemis SaaS Product Value Positioning</h3>
-                <p class="project-card-desc">Led value proposition messaging and architectural demos for Artemis SaaS, articulating ROI and operational savings.</p>
+                <h3 class="project-card-title">Pinterest &amp; Amazon Associate Affiliate Engine</h3>
+                <p class="project-card-desc">Visual Pinterest pin marketing funnels driving organic buyer search traffic directly into localized Amazon Associates product recommendations.</p>
                 <div class="project-btn-row">
-                  <a href="https://artemis.ph/" target="_blank" rel="noreferrer" class="btn-project-action">View Platform →</a>
+                  <a href="https://artemis.ph/" target="_blank" rel="noreferrer" class="btn-project-action">Explore Funnel →</a>
                 </div>
               </div>
             </article>
 
             <article class="editorial-project-card">
-              <a href="https://csg-oits.vercel.app/" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit OITS Transparency Campaign">
+              <a href="https://csg-oits.vercel.app/" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit AI Image & Store Platform">
                 <div class="project-img-frame">
-                  <img src="assets/csg-oits.PNG" alt="OITS Adoption Campaign" loading="lazy">
-                  <div class="project-hover-overlay"><span>Adoption Campaign ↗</span></div>
+                  <img src="assets/csg-oits.PNG" alt="AI Generated Store & Blog Platform" loading="lazy">
+                  <div class="project-hover-overlay"><span>Store Platform ↗</span></div>
                 </div>
               </a>
               <div class="project-info-under">
-                <h3 class="project-card-title">OITS Transparency Platform Adoption Campaign</h3>
-                <p class="project-card-desc">Spearheaded promotional campaigns and multi-channel strategies to drive campus-wide adoption of the transparency portal.</p>
+                <h3 class="project-card-title">AI Image-Generated Blog &amp; Storefront Platform</h3>
+                <p class="project-card-desc">High-speed content blogs and Shopify/WordPress storefronts with automated lifestyle imagery created via advanced AI Image Generation workflows.</p>
                 <div class="project-btn-row">
                   <a href="https://csg-oits.vercel.app/" target="_blank" rel="noreferrer" class="btn-project-action">View Platform →</a>
                 </div>
@@ -154,189 +160,15 @@
         <div class="discipline-row-block">
           <h2 class="block-heading">Stacks &amp; Growth Channels</h2>
           <div class="gauge-list">
-            <!-- GA4 & Tag Manager -->
+            <!-- Pinterest -->
             <div class="gauge-line-item">
               <div class="gauge-header-row">
                 <div class="gauge-title-group">
                   <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt="Google Analytics" class="gauge-logo">
+                    <img src="https://cdn.simpleicons.org/pinterest/BD081C" alt="Pinterest" class="gauge-logo">
                   </span>
-                  <span class="gauge-label">Google Analytics 4 &amp; GTM</span>
-                  <span class="gauge-subtitle">Event Triggers, Custom Conversion Dimensions &amp; User Journey Funnels</span>
-                </div>
-                <span class="gauge-value-pill">88%</span>
-              </div>
-              <div class="gauge-bar-container">
-                <div class="gauge-track">
-                  <div class="gauge-fill" style="width: 88%;"></div>
-                </div>
-                <div class="gauge-markers">
-                  <span>0%</span>
-                  <span>50%</span>
-                  <span>100%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- SEO & Web Traffic -->
-            <div class="gauge-line-item">
-              <div class="gauge-header-row">
-                <div class="gauge-title-group">
-                  <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google Search" class="gauge-logo">
-                  </span>
-                  <span class="gauge-label">Technical SEO &amp; Organic Discovery</span>
-                  <span class="gauge-subtitle">Semantic Structure, OpenGraph Metadata, Site Speed Audits &amp; Search Console</span>
-                </div>
-                <span class="gauge-value-pill">85%</span>
-              </div>
-              <div class="gauge-bar-container">
-                <div class="gauge-track">
-                  <div class="gauge-fill" style="width: 85%;"></div>
-                </div>
-                <div class="gauge-markers">
-                  <span>0%</span>
-                  <span>50%</span>
-                  <span>100%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Technical Pre-Sales -->
-            <div class="gauge-line-item">
-              <div class="gauge-header-row">
-                <div class="gauge-title-group">
-                  <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="Pre-Sales" class="gauge-logo">
-                  </span>
-                  <span class="gauge-label">B2B Technical Pre-Sales &amp; Demos</span>
-                  <span class="gauge-subtitle">Executive Discovery, Live Architectural Demos, POC Presentations &amp; ROI Audits</span>
-                </div>
-                <span class="gauge-value-pill">90%</span>
-              </div>
-              <div class="gauge-bar-container">
-                <div class="gauge-track">
-                  <div class="gauge-fill" style="width: 90%;"></div>
-                </div>
-                <div class="gauge-markers">
-                  <span>0%</span>
-                  <span>50%</span>
-                  <span>100%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Social & Inbound Marketing -->
-            <div class="gauge-line-item">
-              <div class="gauge-header-row">
-                <div class="gauge-title-group">
-                  <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/meta/0081FB" alt="Meta Ads" class="gauge-logo">
-                  </span>
-                  <span class="gauge-label">Inbound &amp; Paid Campaign Funnels</span>
-                  <span class="gauge-subtitle">Target Audience Segmentation, Multi-Channel Ads &amp; Campaign A/B Optimization</span>
-                </div>
-                <span class="gauge-value-pill">84%</span>
-              </div>
-              <div class="gauge-bar-container">
-                <div class="gauge-track">
-                  <div class="gauge-fill" style="width: 84%;"></div>
-                </div>
-                <div class="gauge-markers">
-                  <span>0%</span>
-                  <span>50%</span>
-                  <span>100%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- CRO & Conversion Testing -->
-            <div class="gauge-line-item">
-              <div class="gauge-header-row">
-                <div class="gauge-title-group">
-                  <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/hotjar/FD3A5C" alt="CRO Analytics" class="gauge-logo">
-                  </span>
-                  <span class="gauge-label">Conversion Rate Optimization (CRO)</span>
-                  <span class="gauge-subtitle">Landing Page Copywriting, Call-to-Action Testing &amp; Churn Reduction</span>
-                </div>
-                <span class="gauge-value-pill">82%</span>
-              </div>
-              <div class="gauge-bar-container">
-                <div class="gauge-track">
-                  <div class="gauge-fill" style="width: 82%;"></div>
-                </div>
-                <div class="gauge-markers">
-                  <span>0%</span>
-                  <span>50%</span>
-                  <span>100%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. APPLICATIONS (Line 2: Gauge Meters with Logos) -->
-        <div class="discipline-row-block">
-          <h2 class="block-heading">Applications &amp; Tooling</h2>
-          <div class="gauge-list">
-            <!-- Meta Business Suite -->
-            <div class="gauge-line-item">
-              <div class="gauge-header-row">
-                <div class="gauge-title-group">
-                  <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/meta/0081FB" alt="Meta Business Suite" class="gauge-logo">
-                  </span>
-                  <span class="gauge-label">Meta Business Suite</span>
-                  <span class="gauge-subtitle">Campaign Ad Manager, Audience Retargeting &amp; Spend Efficiency</span>
-                </div>
-                <span class="gauge-value-pill">84%</span>
-              </div>
-              <div class="gauge-bar-container">
-                <div class="gauge-track">
-                  <div class="gauge-fill" style="width: 84%;"></div>
-                </div>
-                <div class="gauge-markers">
-                  <span>0%</span>
-                  <span>50%</span>
-                  <span>100%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- GA4 -->
-            <div class="gauge-line-item">
-              <div class="gauge-header-row">
-                <div class="gauge-title-group">
-                  <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt="GA4" class="gauge-logo">
-                  </span>
-                  <span class="gauge-label">Google Analytics 4 (GA4)</span>
-                  <span class="gauge-subtitle">Cross-Device User Tracking, Conversion Attribution &amp; Event Dashboards</span>
-                </div>
-                <span class="gauge-value-pill">88%</span>
-              </div>
-              <div class="gauge-bar-container">
-                <div class="gauge-track">
-                  <div class="gauge-fill" style="width: 88%;"></div>
-                </div>
-                <div class="gauge-markers">
-                  <span>0%</span>
-                  <span>50%</span>
-                  <span>100%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Canva Pro -->
-            <div class="gauge-line-item">
-              <div class="gauge-header-row">
-                <div class="gauge-title-group">
-                  <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva Pro" class="gauge-logo">
-                  </span>
-                  <span class="gauge-label">Canva Pro</span>
-                  <span class="gauge-subtitle">Pitch Presentation Decks, Sales One-Pagers &amp; Brand Identity Assets</span>
+                  <span class="gauge-label">Pinterest Marketing &amp; SEO</span>
+                  <span class="gauge-subtitle">Visual Search SEO, Rich Product Pins, Click-Through Funnels &amp; Viral Pin Boards</span>
                 </div>
                 <span class="gauge-value-pill">92%</span>
               </div>
@@ -352,15 +184,15 @@
               </div>
             </div>
 
-            <!-- Microsoft Excel / Sheets -->
+            <!-- Amazon Associate -->
             <div class="gauge-line-item">
               <div class="gauge-header-row">
                 <div class="gauge-title-group">
                   <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt="Microsoft Excel" class="gauge-logo">
+                    <img src="https://cdn.simpleicons.org/amazon/FF9900" alt="Amazon Associate" class="gauge-logo">
                   </span>
-                  <span class="gauge-label">Microsoft Excel &amp; Google Sheets</span>
-                  <span class="gauge-subtitle">Sales Pipeline Modeling, Customer Acquisition Cost (CAC) &amp; LTV Forecasting</span>
+                  <span class="gauge-label">Amazon Associate &amp; Affiliate Marketing</span>
+                  <span class="gauge-subtitle">Product Link Localization, Tracking IDs, Conversion Optimization &amp; Niche Catalogs</span>
                 </div>
                 <span class="gauge-value-pill">88%</span>
               </div>
@@ -376,21 +208,147 @@
               </div>
             </div>
 
-            <!-- Notion CRM -->
+            <!-- AI Image Generation -->
             <div class="gauge-line-item">
               <div class="gauge-header-row">
                 <div class="gauge-title-group">
                   <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/notion/white" alt="Notion CRM" class="gauge-logo">
+                    <img src="https://cdn.simpleicons.org/openai/white" alt="AI Image Generation" class="gauge-logo">
                   </span>
-                  <span class="gauge-label">Notion CRM &amp; Pipeline</span>
-                  <span class="gauge-subtitle">Lead Stage Management, Client Discovery Notes &amp; Scoping Deliverables</span>
+                  <span class="gauge-label">AI Image Generation &amp; Visual Creation</span>
+                  <span class="gauge-subtitle">Midjourney, Stable Diffusion, DALL-E 3, Prompt Engineering &amp; High-Res Marketing Assets</span>
                 </div>
-                <span class="gauge-value-pill">86%</span>
+                <span class="gauge-value-pill">94%</span>
               </div>
               <div class="gauge-bar-container">
                 <div class="gauge-track">
-                  <div class="gauge-fill" style="width: 86%;"></div>
+                  <div class="gauge-fill" style="width: 94%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog / Store Website -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/shopify/7AB55C" alt="Blog / Store Website" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Blog / Store Website Development</span>
+                  <span class="gauge-subtitle">High-Converting Landing Pages, SEO Content Architecture, Shopify, WordPress &amp; Checkout Funnels</span>
+                </div>
+                <span class="gauge-value-pill">90%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 90%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. APPLICATIONS (Line 2: Gauge Meters with Logos) -->
+        <div class="discipline-row-block">
+          <h2 class="block-heading">Applications &amp; Tooling</h2>
+          <div class="gauge-list">
+            <!-- Pinterest Business Suite -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/pinterest/BD081C" alt="Pinterest Business" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Pinterest Business Suite</span>
+                  <span class="gauge-subtitle">Pin Analytics, Keyword Search Trends, Outbound Click Tracking &amp; Pin Scheduling</span>
+                </div>
+                <span class="gauge-value-pill">92%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 92%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Amazon Associates SiteStripe -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/amazon/FF9900" alt="Amazon Associates Tools" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Amazon Associates SiteStripe &amp; Reporting</span>
+                  <span class="gauge-subtitle">Affiliate Tag Linking, Bounty Programs, Product Showcases &amp; Earnings Dashboard</span>
+                </div>
+                <span class="gauge-value-pill">88%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 88%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Image Generation Tooling -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/openai/white" alt="AI Image Tooling" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">AI Image Generation Suites</span>
+                  <span class="gauge-subtitle">Midjourney Discord Pipelines, Stable Diffusion WebUI, ComfyUI &amp; DALL-E 3 API</span>
+                </div>
+                <span class="gauge-value-pill">94%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 94%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- WordPress & Shopify CMS -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/wordpress/21759B" alt="WordPress &amp; Shopify" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">WordPress &amp; Shopify CMS</span>
+                  <span class="gauge-subtitle">WooCommerce Storefronts, Elementor Pro, Affiliate Blog Templates &amp; Liquid Customization</span>
+                </div>
+                <span class="gauge-value-pill">90%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 90%;"></div>
                 </div>
                 <div class="gauge-markers">
                   <span>0%</span>
@@ -407,20 +365,20 @@
           <h2 class="block-heading">Sales &amp; Marketing Skills</h2>
           <div class="skills-cards-grid">
             <div class="skill-feature-card">
-              <h4>Technical Pre-Sales &amp; Demos</h4>
-              <p>Conducting discovery calls, solution demos, architectural reviews, and translating engineering capabilities into business value.</p>
+              <h4>Pinterest SEO &amp; Traffic Funnels</h4>
+              <p>Designing high-CTR visual pins, search-optimized board titles, and scheduling algorithms that drive sustained organic buyer traffic.</p>
             </div>
             <div class="skill-feature-card">
-              <h4>Value Storytelling</h4>
-              <p>Articulating complex software architectures into clear, compelling ROI statements that resonate with decision-makers.</p>
+              <h4>Amazon Associate Monetization</h4>
+              <p>Structuring high-converting product roundups, comparison tables, buyer guides, and maximizing commissions with compliance.</p>
             </div>
             <div class="skill-feature-card">
-              <h4>Funnel &amp; Growth Analytics</h4>
-              <p>Tracking user acquisition, click-through drop-offs, user conversion flows, and campaign retention across web touchpoints.</p>
+              <h4>AI Visual Prompt Engineering</h4>
+              <p>Generating photorealistic lifestyle product photos, commercial advertisements, banners, and marketing assets with generative AI models.</p>
             </div>
             <div class="skill-feature-card">
-              <h4>Client Scoping &amp; Proposals</h4>
-              <p>Translating executive vision into structured deliverables, technical milestone proposals, and reliable contract agreements.</p>
+              <h4>Blog &amp; Storefront Architecture</h4>
+              <p>Developing fast-loading, mobile-first e-commerce storefronts and affiliate blogs engineered for top search rank and conversion.</p>
             </div>
           </div>
         </div>
@@ -429,7 +387,7 @@
         <div class="discipline-row-block">
           <h2 class="block-heading">Sales &amp; Marketing Certifications</h2>
           <div class="cert-picture-grid">
-            <!-- Cert 1: Pre-Sales -->
+            <!-- Cert 1: Pinterest & Affiliate -->
             <article class="cert-picture-card">
               <div class="cert-frame-preview">
                 <div class="sample-cert-sheet">
@@ -438,10 +396,10 @@
                     <svg class="cert-sheet-crest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                     </svg>
-                    <span class="cert-sheet-org">Inbound Solutions Academy</span>
+                    <span class="cert-sheet-org">Pinterest &amp; Affiliate Growth Academy</span>
                   </div>
                   <div class="cert-sheet-mid">
-                    <div class="cert-sheet-cert-title">Technical Pre-Sales &amp; Inbound Solutions Strategy</div>
+                    <div class="cert-sheet-cert-title">Pinterest Marketing &amp; Amazon Associate Affiliate Strategy</div>
                     <div class="cert-sheet-recipient">Conferred to Ivan Parales Duran</div>
                   </div>
                   <div class="cert-sheet-bottom">
@@ -449,23 +407,23 @@
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                       </svg>
-                      Verified Pre-Sales
+                      Verified Specialist
                     </span>
-                    <span class="cert-sheet-id">SALES-STRAT-9411</span>
+                    <span class="cert-sheet-id">PIN-AMZ-2026-V1</span>
                   </div>
                 </div>
               </div>
               <div class="cert-picture-meta">
-                <h3 class="cert-picture-title">Technical Pre-Sales &amp; Inbound Solutions Strategy</h3>
-                <p class="cert-picture-desc">Client discovery methodologies, value proposition selling, technical objection handling, and executive proposal formulation.</p>
+                <h3 class="cert-picture-title">Pinterest Marketing &amp; Amazon Associate Affiliate Strategy</h3>
+                <p class="cert-picture-desc">Visual pin SEO, outbound link funnels, Amazon Associates tracking tags, conversion-optimized roundups, and compliant affiliate monetization.</p>
                 <div class="cert-picture-footer">
-                  <span class="cert-tag">Pre-Sales Strategy</span>
+                  <span class="cert-tag">Pinterest &amp; Affiliate</span>
                   <span class="cert-year">2026</span>
                 </div>
               </div>
             </article>
 
-            <!-- Cert 2: Digital Marketing -->
+            <!-- Cert 2: AI Image & E-Commerce Web -->
             <article class="cert-picture-card">
               <div class="cert-frame-preview">
                 <div class="sample-cert-sheet">
@@ -475,10 +433,10 @@
                       <circle cx="12" cy="12" r="10"/>
                       <path d="m9 12 2 2 4-4"/>
                     </svg>
-                    <span class="cert-sheet-org">Digital Growth Institute</span>
+                    <span class="cert-sheet-org">Generative AI &amp; E-Commerce Institute</span>
                   </div>
                   <div class="cert-sheet-mid">
-                    <div class="cert-sheet-cert-title">Digital Marketing &amp; Analytics Foundations</div>
+                    <div class="cert-sheet-cert-title">AI Image Generation &amp; Store Website Development</div>
                     <div class="cert-sheet-recipient">Conferred to Ivan Parales Duran</div>
                   </div>
                   <div class="cert-sheet-bottom">
@@ -486,17 +444,17 @@
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                       </svg>
-                      Growth Certified
+                      AI &amp; Store Certified
                     </span>
-                    <span class="cert-sheet-id">MKTG-ANALYTICS-2026</span>
+                    <span class="cert-sheet-id">AI-STORE-WEB-2026</span>
                   </div>
                 </div>
               </div>
               <div class="cert-picture-meta">
-                <h3 class="cert-picture-title">Digital Marketing &amp; Analytics Foundations</h3>
-                <p class="cert-picture-desc">Conversion funnel optimization, GA4 attribution modeling, paid acquisition campaigns, and content distribution channels.</p>
+                <h3 class="cert-picture-title">AI Image Generation &amp; Store Website Development</h3>
+                <p class="cert-picture-desc">Prompt engineering for commercial graphics, Midjourney &amp; DALL-E generation, WordPress/Shopify content architecture, and checkout funnel optimization.</p>
                 <div class="cert-picture-footer">
-                  <span class="cert-tag">Digital Growth</span>
+                  <span class="cert-tag">AI &amp; E-Commerce</span>
                   <span class="cert-year">2026</span>
                 </div>
               </div>

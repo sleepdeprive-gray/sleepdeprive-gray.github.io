@@ -17,17 +17,27 @@ document.addEventListener("DOMContentLoaded", () => {
     yearElement.textContent = new Date().getFullYear();
   }
 
-  // 2. Theme Persistence (Dark & White + Dennis Cowden Light Mode)
-  const savedTheme = localStorage.getItem("ivan_portfolio_theme");
-  if (savedTheme) {
-    root.setAttribute("data-theme", savedTheme);
-  }
+  // 2. Global Theme Persistence & Sync (Default Night/Dark Mode)
+  const applyTheme = (theme) => {
+    const activeTheme = theme === "light" ? "light" : "dark";
+    root.setAttribute("data-theme", activeTheme);
+  };
+
+  const savedTheme = localStorage.getItem("ivan_portfolio_theme") || "dark";
+  applyTheme(savedTheme);
 
   themeToggleBtn?.addEventListener("click", () => {
     const currentTheme = root.getAttribute("data-theme") || "dark";
     const nextTheme = currentTheme === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", nextTheme);
+    applyTheme(nextTheme);
     localStorage.setItem("ivan_portfolio_theme", nextTheme);
+  });
+
+  // Cross-Tab / Window Real-time Synchronization
+  window.addEventListener("storage", (e) => {
+    if (e.key === "ivan_portfolio_theme" && e.newValue) {
+      applyTheme(e.newValue);
+    }
   });
 
   // 3. Multi-Page Active Nav Tab Determination

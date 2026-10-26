@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem("ivan_portfolio_theme") || "dark";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
   </head>
   <body>
 
@@ -105,10 +111,10 @@
       <section class="editorial-section">
         <!-- Hero Banner -->
         <div class="discipline-hero-banner">
-          <span class="section-kicker">Discipline 03</span>
+          <span class="section-kicker">Core Competency 03</span>
           <h1 class="discipline-page-title">Project Management</h1>
           <p class="discipline-page-summary">
-            Directing agile software delivery through sprint roadmaps, technical PRDs, rigorous QA, and stakeholder coordination.
+            Directing agile software delivery through sprint roadmaps, rapid prototyping, technical PRDs, and rigorous QA verification.
           </p>
         </div>
 
@@ -154,21 +160,21 @@
         <div class="discipline-row-block">
           <h2 class="block-heading">Stacks &amp; Delivery Methodologies</h2>
           <div class="gauge-list">
-            <!-- Agile / Scrum -->
+            <!-- Agile / Prototyping -->
             <div class="gauge-line-item">
               <div class="gauge-header-row">
                 <div class="gauge-title-group">
                   <span class="gauge-logo-box">
-                    <img src="https://cdn.simpleicons.org/linear/5E6AD2" alt="Agile Scrum" class="gauge-logo">
+                    <img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Agile &amp; Prototyping" class="gauge-logo">
                   </span>
-                  <span class="gauge-label">Agile &amp; Scrum Framework</span>
-                  <span class="gauge-subtitle">Sprint Planning, Velocity Estimation, Retrospectives &amp; Blocker Triage</span>
+                  <span class="gauge-label">Agile / Prototyping</span>
+                  <span class="gauge-subtitle">Rapid Wireframing, Figma to Code, Iterative Sprints, Mockups &amp; MVP Validation</span>
                 </div>
-                <span class="gauge-value-pill">94%</span>
+                <span class="gauge-value-pill">95%</span>
               </div>
               <div class="gauge-bar-container">
                 <div class="gauge-track">
-                  <div class="gauge-fill" style="width: 94%;"></div>
+                  <div class="gauge-fill" style="width: 95%;"></div>
                 </div>
                 <div class="gauge-markers">
                   <span>0%</span>

@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem("ivan_portfolio_theme") || "dark";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
   </head>
   <body>
 
@@ -206,14 +212,14 @@
             <div class="comp-card">
               <span class="comp-num">02</span>
               <h3 class="comp-title">Software Developer</h3>
-              <p class="comp-desc">Backend engines, asynchronous worker queues, distributed microservices, caching, and server daemons.</p>
+              <p class="comp-desc">Enterprise architectures, Java &amp; Spring Boot services, backend engines, asynchronous worker queues, and database design.</p>
               <div class="comp-chips">
+                <span>Java</span>
+                <span>Spring Boot</span>
                 <span>Python</span>
                 <span>FastAPI</span>
-                <span>PHP 8+</span>
+                <span>MySQL</span>
                 <span>Redis</span>
-                <span>Linux</span>
-                <span>Docker</span>
               </div>
               <a href="software-development.html" class="comp-link">Explore Software Development →</a>
             </div>
@@ -222,9 +228,9 @@
             <div class="comp-card">
               <span class="comp-num">03</span>
               <h3 class="comp-title">Project Management</h3>
-              <p class="comp-desc">Agile sprint roadmapping, PRD authoring, Postman automated QA testing suites, and stakeholder coordination.</p>
+              <p class="comp-desc">Agile &amp; Scrum workflows, rapid prototyping, PRD authoring, Postman automated QA testing suites, and stakeholder coordination.</p>
               <div class="comp-chips">
-                <span>Agile / Scrum</span>
+                <span>Agile / Prototyping</span>
                 <span>ClickUp</span>
                 <span>Slack</span>
                 <span>PRDs &amp; RFCs</span>
@@ -238,14 +244,12 @@
             <div class="comp-card">
               <span class="comp-num">04</span>
               <h3 class="comp-title">Sales &amp; Marketing</h3>
-              <p class="comp-desc">Technical pre-sales discovery, architectural demonstrations, GA4 conversion funnels, and growth campaigns.</p>
+              <p class="comp-desc">Digital monetization and growth across Pinterest traffic funnels, Amazon Associates affiliate systems, AI image generation, and store websites.</p>
               <div class="comp-chips">
-                <span>Pre-Sales</span>
-                <span>GA4 Analytics</span>
-                <span>Meta Ads</span>
-                <span>SEO Audits</span>
-                <span>Canva Pro</span>
-                <span>Notion CRM</span>
+                <span>Pinterest</span>
+                <span>Amazon Associate</span>
+                <span>AI Image Generation</span>
+                <span>Blog / Store Website</span>
               </div>
               <a href="sales-marketing.html" class="comp-link">Explore Sales &amp; Marketing →</a>
             </div>

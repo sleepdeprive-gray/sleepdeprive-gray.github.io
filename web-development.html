@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem("ivan_portfolio_theme") || "dark";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      })();
+    </script>
   </head>
   <body>
 
@@ -105,7 +111,7 @@
       <section class="editorial-section">
         <!-- Hero Banner -->
         <div class="discipline-hero-banner">
-          <span class="section-kicker">Discipline 01</span>
+          <span class="section-kicker">Core Skills 01</span>
           <h1 class="discipline-page-title">Web Development</h1>
           <p class="discipline-page-summary">
             Designing high-performance, responsive web applications with modern component frameworks and robust backend APIs.
