@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
     activePageKey = "project-management";
   } else if (currentPath.includes("sales-marketing")) {
     activePageKey = "sales-marketing";
+  } else if (currentPath.includes("certification-badge") || currentPath.includes("certifications-badges")) {
+    activePageKey = "certification-badge";
   } else {
     activePageKey = "home";
   }
