@@ -30,7 +30,6 @@
 ## 📁 Projects
 
 - **[OITS](https://csg-oits.vercel.app/)** — Online Information & Transparency System *(Project Head / QA)*
-- **[Artemis](https://artemis.ph/)** — SaaS Web Application *(Internship / Backend & Full Stack)*
 - **[iTrack Async](https://github.com/sleepdeprive-gray/iTrack-Async)** — System Tracking & Management *(Project Head / Full Stack)*
 - **[Nemo](https://nemo-v1.netlify.app/)** — Cloud Storage Solution *(Open Source)*
 - **[Jobless](https://jobless-ph.onrender.com/)** — Job Listing Aggregator *(Open Source)*
