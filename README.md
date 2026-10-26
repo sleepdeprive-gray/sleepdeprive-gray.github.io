@@ -19,9 +19,11 @@
 
 ## 🛠️ Stack
 
-- **Languages & Databases**: PHP, MySQL, JavaScript, Python, HTML, CSS
-- **Frameworks & Tools**: React, Laravel, TailwindCSS, Supabase, Firestore
-- **Leadership & Management**: ClickUp, GitHub, Postman, Technical PRDs & Docs, Agile Delivery, QA Testing, Stakeholder Alignment
+- **Backend & APIs**: Python, FastAPI, PHP, Laravel, RESTful APIs, WebSockets
+- **Frontend & UI**: Next.js, React, TailwindCSS, JavaScript, HTML5, CSS3
+- **Databases & Infrastructure**: MySQL, Redis, Linux, Supabase, Firestore
+- **Leadership & Collaboration**: ClickUp, Slack, Microsoft Office, GitHub, Postman, Technical PRDs & Docs, Agile Delivery, QA Testing
+
 
 ---
 

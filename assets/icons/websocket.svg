@@ -1,0 +1,9 @@
+<svg role="img" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>WebSockets</title>
+  <path d="M6 15l-3-3 3-3" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3 12h11" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M18 9l3 3-3 3" stroke="#00DC82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 12H10" stroke="#00DC82" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="14" cy="12" r="2" fill="#38BDF8"/>
+  <circle cx="10" cy="12" r="2" fill="#00DC82"/>
+</svg>
