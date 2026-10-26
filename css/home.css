@@ -348,6 +348,23 @@
   color: var(--text-muted);
 }
 
+.comp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 16px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.comp-link:hover {
+  color: var(--accent-color, #38bdf8);
+  transform: translateX(3px);
+}
+
 [data-theme="light"] .comp-chips span {
   background: rgba(0, 0, 0, 0.04);
 }
@@ -380,5 +397,11 @@
 
   .statement-headline {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .competency-editorial-grid {
+    grid-template-columns: 1fr;
   }
 }
