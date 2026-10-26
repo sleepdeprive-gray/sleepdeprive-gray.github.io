@@ -1,707 +1,454 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Command line portfolio of Ivan Parales Duran, a backend-focused full stack developer.">
-    <title>Ivan Parales Duran | Backend Developer</title>
+    <meta name="description" content="Portfolio of Ivan Parales Duran — Full Stack Engineer, Software Developer & Project Lead.">
+    <title>Ivan Parales Duran | Full Stack Engineer &amp; Project Lead</title>
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="scanline" aria-hidden="true"></div>
 
-    <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="Ivan Parales Duran home">
-        <img src="assets/logo.svg" alt="Logo" class="brand-logo" width="28" height="28">
-        <span class="brand-name">Ivan Parales Duran</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#stack">stack</a>
-        <a href="#projects">projects</a>
-        <a href="#experience">experience</a>
-        <a href="#contact">contact</a>
+    <!-- Left-Stuck Side Navigation Dock (Zero Left Gap) -->
+    <aside class="side-nav-dock" data-side-nav aria-label="Main Navigation">
+      <nav class="side-nav-rail">
+        <!-- Item 1: Home -->
+        <a href="index.html" class="side-nav-item is-active" data-page="home" aria-label="Go to Home">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </span>
+          <span class="nav-label">Home</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Item 2: Web Development -->
+        <a href="web-development.html" class="side-nav-item" data-page="web-development" aria-label="Go to Web Development">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="3" rx="2"/>
+              <line x1="8" x2="16" y1="21" y2="21"/>
+              <line x1="12" x2="12" y1="17" y2="21"/>
+            </svg>
+          </span>
+          <span class="nav-label">Web Development</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Item 3: Software Development -->
+        <a href="software-development.html" class="side-nav-item" data-page="software-development" aria-label="Go to Software Development">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+              <line x1="14" x2="10" y1="4" y2="20"/>
+            </svg>
+          </span>
+          <span class="nav-label">Software Development</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Item 4: Project Management -->
+        <a href="project-management.html" class="side-nav-item" data-page="project-management" aria-label="Go to Project Management">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+          </span>
+          <span class="nav-label">Project Management</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Item 5: Sales & Marketing -->
+        <a href="sales-marketing.html" class="side-nav-item" data-page="sales-marketing" aria-label="Go to Sales & Marketing">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </span>
+          <span class="nav-label">Sales &amp; Marketing</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
       </nav>
+    </aside>
+
+    <!-- Top Minimalist Header (Logo + Full Name + Line SVG Theme Toggle) -->
+    <header class="site-header" data-header>
+      <div class="header-inner">
+        <a class="brand-title" href="index.html" aria-label="Ivan Parales Duran portfolio home">
+          <img src="assets/logo.svg" alt="Ivan Logo" class="brand-logo" width="28" height="28">
+          <span class="brand-bold">Ivan Parales Duran</span>
+        </a>
+
+        <div class="header-right-actions">
+          <!-- Theme Toggle Switch with SVG icon matching navigation -->
+          <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark and light theme">
+            <!-- Sun SVG (shows in dark mode) -->
+            <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <!-- Moon SVG (shows in light mode) -->
+            <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main id="home" class="terminal-shell">
-      <section class="terminal-window hero-terminal" aria-labelledby="terminal-title">
-        <div class="terminal-topbar">
-          <div class="window-controls" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <span class="window-title">ivan@portfolio:~</span>
-          <span class="window-status">active</span>
-        </div>
+    <!-- Main Container -->
+    <main class="main-wrapper" id="main-content">
 
-        <div class="terminal-grid">
-          <div class="terminal-output">
-            <p class="line muted" data-exec="whoami">$ whoami</p>
-            <h1 id="terminal-title">Ivan Parales Duran</h1>
-            <p class="terminal-copy">
-              Full stack developer &amp; project lead experienced in backend systems, agile delivery, requirements planning, and end-to-end software management.
-            </p>
+      <!-- ============================================== -->
+      <!-- SECTION: HOME HERO                             -->
+      <!-- ============================================== -->
+      <section class="editorial-section" id="home">
+        
+        <!-- 3-Column Editorial Hero Layout (Dennis Cowden style) -->
+        <div class="hero-editorial-grid">
+          <!-- Left Column -->
+          <div class="hero-col hero-col-left">
+            <span class="hero-intro-text">Hey there, I'm</span>
+            <h1 class="hero-name-heading">Ivan Parales Duran</h1>
           </div>
 
-          <aside class="system-card" aria-label="System status">
-            <div class="image-terminal">
-              <img src="assets/pfp.jfif" alt="Profile picture of Ivan Parales Duran">
+          <!-- Center Column (Framed Portrait Photo) -->
+          <div class="hero-col hero-col-center">
+            <div class="portrait-photo-box">
+              <img src="assets/pfp.jfif" alt="Ivan Parales Duran" class="portrait-img" loading="eager">
             </div>
-            <dl>
-              <div>
-                <dt>status</dt>
-                <dd>open for work and projects</dd>
-              </div>
-              <div>
-                <dt>expertise</dt>
-                <dd>pm &amp; full stack</dd>
-              </div>
-              <div>
-                <dt>stack</dt>
-                <dd>php / react / mysql</dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </section>
-
-      <section class="terminal-window section" id="stack">
-        <div class="terminal-topbar">
-          <span class="window-title">./stack</span>
-          <span class="window-status">skills &amp; leadership</span>
-        </div>
-        <div class="section-heading">
-          <p class="line muted" data-exec="stack">$ ls -la tech-stack &amp;&amp; cat leadership.md</p>
-          <h2>Engineering systems &amp; leading delivery.</h2>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card featured">
-            <p class="project-type">backend &amp; apis</p>
-            <h3>Backend Architecture &amp; APIs</h3>
-            <p>
-              Designing resilient server-side services, data processing pipelines, and high-performance communication protocols.
-            </p>
-            <div class="tag-row">
-              <span class="skill-badge" style="--level: 70%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">70%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/python/3776AB" alt="">
-                  <span>python</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 75%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">75%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/fastapi/009688" alt="">
-                  <span>fastapi</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 84%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">84%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/php/777BB4" alt="">
-                  <span>php</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 65%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">65%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="">
-                  <span>laravel</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 90%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">90%</span>
-                <span class="skill-content">
-                  <img src="assets/icons/rest-api.svg" alt="">
-                  <span>restful</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 75%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">75%</span>
-                <span class="skill-content">
-                  <img src="assets/icons/websocket.svg" alt="">
-                  <span>websockets</span>
-                </span>
-              </span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">frontend</p>
-            <h3>Modern Frontend &amp; UI</h3>
-            <p>
-              Crafting reactive, accessible user interfaces with modern component frameworks and responsive design systems.
-            </p>
-            <div class="tag-row">
-              <span class="skill-badge" style="--level: 85%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">85%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="">
-                  <span>next.js</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 70%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">70%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/react/61DAFB" alt="">
-                  <span>react</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 65%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">65%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="">
-                  <span>tailwind</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 70%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">70%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="">
-                  <span>javascript</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 90%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">90%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/html5/E34F26" alt="">
-                  <span>html</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 75%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">75%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/css/663399" alt="">
-                  <span>css</span>
-                </span>
-              </span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">databases &amp; devops</p>
-            <h3>Databases &amp; Infrastructure</h3>
-            <p>
-              Managing relational schemas, in-memory cache layers, Unix environments, and modern cloud backend services.
-            </p>
-            <div class="tag-row">
-              <span class="skill-badge" style="--level: 90%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">90%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="">
-                  <span>mysql</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 60%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">60%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/redis/DC382D" alt="">
-                  <span>redis</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 85%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">85%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/linux/FCC624" alt="">
-                  <span>linux</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 85%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">85%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="">
-                  <span>supabase</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 75%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">75%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="">
-                  <span>firestore</span>
-                </span>
-              </span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">leadership &amp; collaboration</p>
-            <h3>Product Leadership &amp; Collaboration</h3>
-            <p>
-              Directing agile delivery, team collaboration, QA verification, and technical requirement documentation.
-            </p>
-            <div class="tag-row">
-              <span class="skill-badge" style="--level: 95%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">95%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/clickup/7B68EE" alt="">
-                  <span>clickup</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 100%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">100%</span>
-                <span class="skill-content">
-                  <img src="assets/icons/slack.svg" alt="">
-                  <span>slack</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 100%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">100%</span>
-                <span class="skill-content">
-                  <img src="assets/icons/microsoftoffice.svg" alt="">
-                  <span>ms office</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 90%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">90%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="">
-                  <span>github</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 78%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">78%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/postman/FF6C37" alt="">
-                  <span>postman / qa</span>
-                </span>
-              </span>
-              <span class="skill-badge" style="--level: 100%;">
-                <span class="liquid-fill" aria-hidden="true"></span>
-                <span class="skill-percent" aria-hidden="true">100%</span>
-                <span class="skill-content">
-                  <img src="https://cdn.simpleicons.org/markdown/FFFFFF" alt="">
-                  <span>docs &amp; prds</span>
-                </span>
-              </span>
-            </div>
-          </article>
-        </div>
-
-        <div class="management-matrix-panel" id="pm-competencies">
-          <div class="matrix-header">
-            <p class="line muted" data-exec="pm">$ cat ./pm-competencies.log</p>
-            <h3>Leadership &amp; Delivery Competencies</h3>
-            <p class="matrix-desc">
-              Bridging technical architecture and project execution to deliver maintainable software on schedule.
-            </p>
           </div>
 
-          <div class="management-grid">
-            <div class="management-card">
-              <div class="management-card-header">
-                <span class="management-card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                  </svg>
-                </span>
-                <h4>Agile Orchestration &amp; Roadmapping</h4>
-              </div>
-              <p>Facilitating sprint cycles, backlog prioritization, timeline forecasting, and blocker removal to keep delivery velocity high.</p>
-              <div class="capability-tags">
-                <span>sprint cycles</span>
-                <span>backlog grooming</span>
-                <span>milestone delivery</span>
-              </div>
-            </div>
+          <!-- Right Column (Short Bio & Socials Row) -->
+          <div class="hero-col hero-col-right">
+            <p class="hero-editorial-bio">
+              Full-stack engineer &amp; project lead (<em>Cum Laude, BS IT</em>) driven by constant growth across web &amp; software engineering, management, and operations.
+            </p>
 
-            <div class="management-card">
-              <div class="management-card-header">
-                <span class="management-card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                  </svg>
-                </span>
-                <h4>Technical Scoping &amp; PRDs</h4>
-              </div>
-              <p>Authoring actionable product specs, user workflow diagrams, schema models, and feature acceptance criteria for developers.</p>
-              <div class="capability-tags">
-                <span>prds &amp; rfc docs</span>
-                <span>schema design</span>
-                <span>user workflows</span>
-              </div>
-            </div>
+            <!-- Socials Icon Row (Replacing Contact Button) -->
+            <div class="hero-socials-row" aria-label="Social Profiles">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/duran-ivan/" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Visit Ivan's LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect width="4" height="12" x="2" y="9"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
 
-            <div class="management-card">
-              <div class="management-card-header">
-                <span class="management-card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 11l3 3L22 4"></path>
-                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                  </svg>
-                </span>
-                <h4>Quality Assurance &amp; Code Review</h4>
-              </div>
-              <p>Designing structured test plans, validating API endpoints via Postman, conducting PR reviews, and enforcing release criteria.</p>
-              <div class="capability-tags">
-                <span>api testing</span>
-                <span>code reviews</span>
-                <span>uat validation</span>
-              </div>
-            </div>
+              <!-- Instagram -->
+              <a href="https://instagram.com/" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Visit Ivan's Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
 
-            <div class="management-card">
-              <div class="management-card-header">
-                <span class="management-card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </span>
-                <h4>Cross-Functional Alignment</h4>
-              </div>
-              <p>Synchronizing stakeholders, clients, and technical teams with transparent communication, executive updates, and risk mitigation.</p>
-              <div class="capability-tags">
-                <span>stakeholder syncs</span>
-                <span>dev unblocking</span>
-                <span>risk mitigation</span>
-              </div>
+              <!-- Facebook -->
+              <a href="https://facebook.com/" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Visit Ivan's Facebook">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:ayban.duran@gmail.com" class="social-icon-btn" aria-label="Send Ivan an Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-      </section>
 
-      <section class="terminal-window section" id="projects">
-        <div class="terminal-topbar">
-          <span class="window-title">./projects</span>
-          <span class="window-status">directory</span>
-        </div>
-        <div class="section-heading">
-          <p class="line muted" data-exec="projects">$ find ./projects -maxdepth 1 -type f</p>
-          <h2>Projects and contributions.</h2>
-        </div>
 
-        <div class="portfolio-project-grid">
-          <article class="portfolio-project-card">
-            <a href="https://csg-oits.vercel.app/" class="project-preview-wrap" target="_blank" rel="noreferrer" aria-label="Visit Online Information &amp; Transparency System website">
-              <div class="preview-browser-bar">
-                <span class="preview-dot dot-red"></span>
-                <span class="preview-dot dot-yellow"></span>
-                <span class="preview-dot dot-green"></span>
-                <span class="preview-url">csg-oits.vercel.app</span>
-                <span class="preview-link-hint">visit ↗</span>
-              </div>
-              <div class="preview-img-container">
-                <img src="assets/csg-oits.PNG" alt="Online Information &amp; Transparency System Website Preview" class="project-preview-img" loading="lazy">
-                <div class="preview-overlay">
-                  <span>open website ↗</span>
+        <!-- Section: Recent Projects (Dennis Cowden 2-Column Grid) -->
+        <div class="recent-projects-block" id="recent-projects">
+          <div class="section-title-wrap">
+            <h2 class="editorial-section-title">Recent projects</h2>
+          </div>
+
+          <div class="editorial-projects-grid">
+            <!-- Project 1: OITS -->
+            <article class="editorial-project-card">
+              <a href="https://csg-oits.vercel.app/" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit Online Information & Transparency System">
+                <div class="project-img-frame">
+                  <img src="assets/csg-oits.PNG" alt="Online Information & Transparency System" loading="lazy">
+                  <div class="project-hover-overlay">
+                    <span>Visit Live Site ↗</span>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <div class="project-card-body">
-              <p class="project-type">website / project head</p>
-              <h3>Online Information &amp; Transparency System</h3>
-              <div class="project-detail-list">
-                <span>project management</span>
-                <span>requirements analysis</span>
-                <span>qa testing</span>
-                <span>agile planning</span>
-                <span>stakeholder coordination</span>
-                <span>system documentation</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="portfolio-project-card">
-            <a href="https://artemis.ph/" class="project-preview-wrap" target="_blank" rel="noreferrer" aria-label="Visit Artemis SaaS website">
-              <div class="preview-browser-bar">
-                <span class="preview-dot dot-red"></span>
-                <span class="preview-dot dot-yellow"></span>
-                <span class="preview-dot dot-green"></span>
-                <span class="preview-url">artemis.ph</span>
-                <span class="preview-link-hint">visit ↗</span>
-              </div>
-              <div class="preview-img-container">
-                <img src="assets/artemis.PNG" alt="Artemis SaaS Website Preview" class="project-preview-img" loading="lazy">
-                <div class="preview-overlay">
-                  <span>open website ↗</span>
+              </a>
+              <div class="project-info-under">
+                <h3 class="project-card-title">Online Information &amp; Transparency System</h3>
+                <p class="project-card-desc">
+                  Institutional transparency portal. Directed end-to-end delivery, authored PRDs, and conducted QA testing.
+                </p>
+                <div class="project-btn-row">
+                  <a href="https://csg-oits.vercel.app/" target="_blank" rel="noreferrer" class="btn-project-action">
+                    <span>View Project →</span>
+                  </a>
                 </div>
-              </div>
-            </a>
-            <div class="project-card-body">
-              <p class="project-type">internship / backend &amp; full stack</p>
-              <h3>Artemis</h3>
-              <div class="project-detail-list">
-                <span>laravel</span>
-                <span>php</span>
-                <span>rest apis</span>
-                <span>mysql</span>
-                <span>laravel horizon</span>
-                <span>rbac &amp; security</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="portfolio-project-card">
-            <a href="https://itrack-async.alwaysdata.net/" class="project-preview-wrap" target="_blank" rel="noreferrer" aria-label="Visit iTrack Async website">
-              <div class="preview-browser-bar">
-                <span class="preview-dot dot-red"></span>
-                <span class="preview-dot dot-yellow"></span>
-                <span class="preview-dot dot-green"></span>
-                <span class="preview-url">itrack-async.alwaysdata.net</span>
-                <span class="preview-link-hint">visit ↗</span>
-              </div>
-              <div class="preview-img-container">
-                <img src="assets/itrack-async.PNG" alt="iTrack Async Website Preview" class="project-preview-img" loading="lazy">
-                <div class="preview-overlay">
-                  <span>open website ↗</span>
-                </div>
-              </div>
-            </a>
-            <div class="project-card-body">
-              <p class="project-type">project head / full stack developer</p>
-              <h3>iTrack Async</h3>
-              <div class="project-detail-list">
-                <span>database architecture</span>
-                <span>system management</span>
-                <span>requirements analysis</span>
-                <span>system maintenance</span>
-                <span>rest apis</span>
-                <span>php</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="portfolio-project-card">
-            <a href="https://nemo-v1.netlify.app/" class="project-preview-wrap" target="_blank" rel="noreferrer" aria-label="Visit Nemo Cloud Storage website">
-              <div class="preview-browser-bar">
-                <span class="preview-dot dot-red"></span>
-                <span class="preview-dot dot-yellow"></span>
-                <span class="preview-dot dot-green"></span>
-                <span class="preview-url">nemo-v1.netlify.app</span>
-                <span class="preview-link-hint">visit ↗</span>
-              </div>
-              <div class="preview-img-container">
-                <img src="assets/nemo.PNG" alt="Nemo Cloud Storage Website Preview" class="project-preview-img" loading="lazy">
-                <div class="preview-overlay">
-                  <span>open website ↗</span>
-                </div>
-              </div>
-            </a>
-            <div class="project-card-body">
-              <p class="project-type">open source / cloud storage solution</p>
-              <h3>Nemo</h3>
-              <div class="project-detail-list">
-                <span>self-hosted</span>
-                <span>cloud storage integration</span>
-                <span>api integration</span>
-                <span>storage management</span>
-                <span>backend services</span>
-                <span>open source</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="portfolio-project-card">
-            <a href="https://jobless-ph.onrender.com/" class="project-preview-wrap" target="_blank" rel="noreferrer" aria-label="Visit Jobless job listing aggregator website">
-              <div class="preview-browser-bar">
-                <span class="preview-dot dot-red"></span>
-                <span class="preview-dot dot-yellow"></span>
-                <span class="preview-dot dot-green"></span>
-                <span class="preview-url">jobless-ph.onrender.com</span>
-                <span class="preview-link-hint">visit ↗</span>
-              </div>
-              <div class="preview-img-container">
-                <img src="assets/jobless.PNG" alt="Jobless Job Listing Platform Preview" class="project-preview-img" loading="lazy">
-                <div class="preview-overlay">
-                  <span>open website ↗</span>
-                </div>
-              </div>
-            </a>
-            <div class="project-card-body">
-              <p class="project-type">open source / job listing solution</p>
-              <h3>Jobless</h3>
-              <div class="project-detail-list">
-                <span>job listing integration</span>
-                <span>rest apis</span>
-                <span>data aggregation</span>
-                <span>web architecture</span>
-                <span>api integration</span>
-                <span>open source</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="terminal-window section" id="experience">
-        <div class="terminal-topbar">
-          <span class="window-title">experiences.log</span>
-          <span class="window-status">tail</span>
-        </div>
-
-        <div class="section-heading">
-          <p class="line muted" data-exec="experience">$ cat experiences.log</p>
-          <h2>Experiences and milestones.</h2>
-        </div>
-
-        <div class="experience-panel">
-          <div class="timeline-strip" data-timeline-track>
-            <article class="timeline-node below">
-              <span class="timeline-dot" aria-hidden="true"></span>
-              <div class="timeline-card">
-                <h3>Graduate of Bachelor of Science in Information Technology (Cum Laude)</h3>
-                <p>Graduated Cum Laude, completing 4 years in the Bachelor of Science in Information Technology program.</p>
-                <span class="timeline-date">2022 - 2026</span>
               </div>
             </article>
 
-            <article class="timeline-node above">
-              <span class="timeline-dot" aria-hidden="true"></span>
-              <div class="timeline-card">
-                <h3>Project Head at OITS</h3>
-                <p>Led the Online Information &amp; Transparency System for Central Student Government - Imus Campus.</p>
-                <span class="timeline-date">November 2025 - September 2026</span>
+            <!-- Project 2: Artemis -->
+            <article class="editorial-project-card">
+              <a href="https://artemis.ph/" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit Artemis SaaS Web Application">
+                <div class="project-img-frame">
+                  <img src="assets/artemis.PNG" alt="Artemis SaaS Platform" loading="lazy">
+                  <div class="project-hover-overlay">
+                    <span>Visit Live Site ↗</span>
+                  </div>
+                </div>
+              </a>
+              <div class="project-info-under">
+                <h3 class="project-card-title">Artemis SaaS Platform</h3>
+                <p class="project-card-desc">
+                  Enterprise SaaS platform featuring Laravel Horizon queues, multi-tenant DB, and RBAC authentication.
+                </p>
+                <div class="project-btn-row">
+                  <a href="https://artemis.ph/" target="_blank" rel="noreferrer" class="btn-project-action">
+                    <span>View Project →</span>
+                  </a>
+                </div>
               </div>
             </article>
 
-            <article class="timeline-node below">
-              <span class="timeline-dot" aria-hidden="true"></span>
-              <div class="timeline-card">
-                <h3>Full Stack Developer Internship</h3>
-                <p>Completed internship at Meta Digitrading Enterprise Co., starting primarily in backend development and later transitioning to full stack.</p>
-                <span class="timeline-date">March 2026 - May 2026</span>
+            <!-- Project 3: Nemo -->
+            <article class="editorial-project-card">
+              <a href="https://nemo-v1.netlify.app/" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit Nemo Cloud Storage Solution">
+                <div class="project-img-frame">
+                  <img src="assets/nemo.PNG" alt="Nemo Cloud Storage Solution" loading="lazy">
+                  <div class="project-hover-overlay">
+                    <span>Visit Live Site ↗</span>
+                  </div>
+                </div>
+              </a>
+              <div class="project-info-under">
+                <h3 class="project-card-title">Nemo Cloud Storage Solution</h3>
+                <p class="project-card-desc">
+                  Cloud storage manager with instant drag-and-drop ingestion, directory tree traversal, and direct download links.
+                </p>
+                <div class="project-btn-row">
+                  <a href="https://nemo-v1.netlify.app/" target="_blank" rel="noreferrer" class="btn-project-action">
+                    <span>View Project →</span>
+                  </a>
+                </div>
               </div>
             </article>
 
-            <article class="timeline-node above">
-              <span class="timeline-dot" aria-hidden="true"></span>
-              <div class="timeline-card">
-                <h3>Self Projects &amp; Certifications</h3>
-                <p>Developing self-directed projects and obtaining certifications in Cisco and related certification bodies.</p>
-                <span class="timeline-date">June 2026 - Present</span>
+            <!-- Project 4: iTrack Async -->
+            <article class="editorial-project-card">
+              <a href="https://itrack-async.alwaysdata.net/" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit iTrack Async System">
+                <div class="project-img-frame">
+                  <img src="assets/itrack-async.PNG" alt="iTrack Async Tracking & Management" loading="lazy">
+                  <div class="project-hover-overlay">
+                    <span>Visit Live Site ↗</span>
+                  </div>
+                </div>
+              </a>
+              <div class="project-info-under">
+                <h3 class="project-card-title">iTrack Async Tracking &amp; Management</h3>
+                <p class="project-card-desc">
+                  Real-time tracking system built with asynchronous worker queues, MySQL architecture, and automated synchronization.
+                </p>
+                <div class="project-btn-row">
+                  <a href="https://itrack-async.alwaysdata.net/" target="_blank" rel="noreferrer" class="btn-project-action">
+                    <span>View Project →</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Main Page: Core Stacks & Skills Preview -->
+        <div class="editorial-sub-block">
+          <div class="section-title-wrap">
+            <h2 class="editorial-section-title">Core stacks &amp; competencies</h2>
+          </div>
+
+          <div class="competency-editorial-grid">
+            <div class="comp-card">
+              <span class="comp-num">01</span>
+              <h3 class="comp-title">Backend Architecture &amp; APIs</h3>
+              <p class="comp-desc">FastAPI, Python, PHP 8+, Laravel, RESTful endpoints, and WebSockets for real-time services.</p>
+              <div class="comp-chips">
+                <span>FastAPI</span>
+                <span>Python</span>
+                <span>PHP</span>
+                <span>Laravel</span>
+                <span>MySQL</span>
+                <span>Redis</span>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <span class="comp-num">02</span>
+              <h3 class="comp-title">Modern Frontend &amp; UI</h3>
+              <p class="comp-desc">Crafting responsive, accessible user interfaces with modern component frameworks and design systems.</p>
+              <div class="comp-chips">
+                <span>Next.js</span>
+                <span>React</span>
+                <span>TailwindCSS</span>
+                <span>JavaScript</span>
+                <span>HTML5 / CSS3</span>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <span class="comp-num">03</span>
+              <h3 class="comp-title">Product Leadership &amp; QA</h3>
+              <p class="comp-desc">Directing agile delivery, team collaboration, QA verification via Postman, and technical requirement documentation.</p>
+              <div class="comp-chips">
+                <span>ClickUp</span>
+                <span>Slack</span>
+                <span>PRDs &amp; RFCs</span>
+                <span>Postman QA</span>
+                <span>Agile / Scrum</span>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <span class="comp-num">04</span>
+              <h3 class="comp-title">Infrastructure &amp; Systems</h3>
+              <p class="comp-desc">Managing relational database schemas, Linux Unix server environments, Supabase, and containerized deployments.</p>
+              <div class="comp-chips">
+                <span>Linux</span>
+                <span>Docker</span>
+                <span>Bash</span>
+                <span>Supabase</span>
+                <span>Git / GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Page: Certifications Showing Sample Certificate Picture -->
+        <div class="editorial-sub-block">
+          <div class="section-title-wrap">
+            <h2 class="editorial-section-title">Certifications &amp; honors</h2>
+          </div>
+
+          <div class="cert-picture-grid">
+            <!-- Cert 1: Cum Laude Diploma -->
+            <article class="cert-picture-card">
+              <div class="cert-frame-preview">
+                <div class="sample-cert-sheet">
+                  <span class="cert-sample-badge">Verified Credential</span>
+                  <div class="cert-sheet-top">
+                    <svg class="cert-sheet-crest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span class="cert-sheet-org">Cavite State University</span>
+                  </div>
+                  <div class="cert-sheet-mid">
+                    <h4 class="cert-sheet-cert-title">BS in Information Technology (Cum Laude)</h4>
+                    <span class="cert-sheet-recipient">Conferred to: Ivan Parales Duran</span>
+                  </div>
+                  <div class="cert-sheet-bottom">
+                    <span class="cert-sheet-seal-badge">✔ Academic Honors</span>
+                    <span class="cert-sheet-id">ID: BSIT-2026-CL</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cert-picture-meta">
+                <h3 class="cert-picture-title">Bachelor of Science in Information Technology (Cum Laude)</h3>
+                <p class="cert-picture-desc">Graduated with Latin Honors after completing 4 years in Information Technology program.</p>
+                <div class="cert-picture-footer">
+                  <span class="cert-tag">Academic Distinction</span>
+                  <span class="cert-year">2022 – 2026</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Cert 2: Cisco CCNA -->
+            <article class="cert-picture-card">
+              <div class="cert-frame-preview">
+                <div class="sample-cert-sheet">
+                  <span class="cert-sample-badge">Verified Credential</span>
+                  <div class="cert-sheet-top">
+                    <svg class="cert-sheet-crest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M8 12h8M12 8v8"/>
+                    </svg>
+                    <span class="cert-sheet-org">Cisco Networking Academy</span>
+                  </div>
+                  <div class="cert-sheet-mid">
+                    <h4 class="cert-sheet-cert-title">Cisco Certified Network Associate (CCNA)</h4>
+                    <span class="cert-sheet-recipient">Certified: Ivan Parales Duran</span>
+                  </div>
+                  <div class="cert-sheet-bottom">
+                    <span class="cert-sheet-seal-badge">✔ Cisco Verified</span>
+                    <span class="cert-sheet-id">CSCO-ID: 1429801</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cert-picture-meta">
+                <h3 class="cert-picture-title">Cisco Certified Network Associate (CCNA)</h3>
+                <p class="cert-picture-desc">Enterprise routing, IP services, security fundamentals, and switching architectures.</p>
+                <div class="cert-picture-footer">
+                  <span class="cert-tag">Networking &amp; Infrastructure</span>
+                  <span class="cert-year">2026</span>
+                </div>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="terminal-window contact-section" id="contact">
-        <div class="terminal-topbar">
-          <span class="window-title">contact.sh</span>
-          <span class="window-status">available</span>
-        </div>
-        <div class="contact-grid">
-          <div>
-            <p class="line muted" data-exec="contact">$ ./contact.sh --status=available</p>
-            <h2>Let us build reliable software &amp; lead delivery.</h2>
-            <p>
-              Open for full-time full stack &amp; backend roles, technical project management, or collaborative software projects.
-            </p>
-          </div>
-          <div class="contact-actions">
-            <a class="button primary" href="mailto:ayban.duran@gmail.com">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.08-.47 6.32 5.28a.92.92 0 0 0 1.2 0l6.32-5.28a.75.75 0 0 0-.67-.78H5.75a.75.75 0 0 0-.67.78Zm14.42 1.53-5.92 4.95a2.42 2.42 0 0 1-3.16 0L4.5 7.8v9.45c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25V7.81Z"></path>
-              </svg>
-              <span>send an email</span>
+      <!-- ============================================== -->
+      <!-- SECTION: CONTACT & FOOTER                      -->
+      <!-- ============================================== -->
+      <section class="editorial-section contact-block" id="contact">
+        <div class="contact-editorial-content">
+          <span class="contact-eyebrow">Get in touch</span>
+          <h2 class="contact-huge-title">Have a project in mind?<br>Let's build reliable software.</h2>
+          <p class="contact-subtext">
+            Open for full-time full stack and software engineering roles, technical project management, or collaborative software ventures.
+          </p>
+
+          <div class="contact-btn-cloud">
+            <a href="mailto:ayban.duran@gmail.com" class="btn-editorial-solid">
+              <span>ayban.duran@gmail.com ↗</span>
+            </a>
+            <a href="https://wa.me/639919048089" target="_blank" rel="noreferrer" class="btn-editorial-outline">
+              <span>WhatsApp (+63 991 904 8089) ↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/duran-ivan/" target="_blank" rel="noreferrer" class="btn-editorial-outline">
+              <span>LinkedIn ↗</span>
+            </a>
+            <a href="https://github.com/sleepdeprive-gray" target="_blank" rel="noreferrer" class="btn-editorial-outline">
+              <span>GitHub ↗</span>
             </a>
           </div>
         </div>
+
+        <div class="minimal-footer-line">
+          <span>© <span data-year>2026</span> Ivan Parales Duran. All rights reserved.</span>
+          <span>Cum Laude BS IT · Full Stack Engineer &amp; Project Lead</span>
+        </div>
       </section>
+
     </main>
-
-    <footer class="site-footer">
-      <span>© <span data-year></span> Ivan Parales Duran</span>
-      <div>
-        <a href="https://wa.me/639919048089" target="_blank" rel="noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"></path>
-          </svg>
-          <span>whatsapp</span>
-        </a>
-        <a href="https://www.linkedin.com/in/duran-ivan/" rel="noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M4.98 3.5A2.48 2.48 0 1 1 5 8.46a2.48 2.48 0 0 1-.02-4.96ZM3.5 9.7h3V20h-3V9.7Zm5 0h2.88v1.4h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.58V20h-3v-5.2c0-1.24-.02-2.84-1.74-2.84-1.74 0-2.01 1.36-2.01 2.75V20h-3V9.7Z"></path>
-          </svg>
-          <span>linkedin</span>
-        </a>
-        <a href="https://github.com/sleepdeprive-gray" rel="noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.3 9.43 7.88 10.96.58.1.79-.25.79-.56v-1.98c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.27.73-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.57.24 2.73.12 3.02.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.35.77 1.03.77 2.08v3.07c0 .31.2.67.8.56a11.54 11.54 0 0 0 7.87-10.96C23.5 5.66 18.35.5 12 .5Z"></path>
-          </svg>
-          <span>github</span>
-        </a>
-        <a href="mailto:ayban.duran@gmail.com">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.08-.47 6.32 5.28a.92.92 0 0 0 1.2 0l6.32-5.28a.75.75 0 0 0-.67-.78H5.75a.75.75 0 0 0-.67.78Zm14.42 1.53-5.92 4.95a2.42 2.42 0 0 1-3.16 0L4.5 7.8v9.45c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25V7.81Z"></path>
-          </svg>
-          <span>email</span>
-        </a>
-      </div>
-    </footer>
-
-    <!-- Floating Terminal CLI Widget -->
-    <div class="floating-cli-backdrop" data-cli-backdrop hidden></div>
-    <div class="floating-cli" data-cli>
-      <div class="floating-cli-panel" data-cli-panel hidden>
-        <div class="terminal-window floating-cli-window" aria-label="Interactive prompt">
-          <div class="terminal-topbar">
-            <div class="window-controls">
-              <button class="window-control-close" type="button" data-cli-close aria-label="Close terminal"></button>
-              <span></span>
-              <span></span>
-            </div>
-            <span class="window-title">ivan@portfolio:~/shell</span>
-            <span class="window-status" data-command-status>idle</span>
-          </div>
-          <div class="shell-history" data-shell-history aria-live="polite"></div>
-          <div class="shell-quick-commands" aria-label="Quick command shortcuts">
-            <span class="quick-label">quick:</span>
-            <button type="button" class="quick-cmd-btn" data-quick-cmd="projects">projects</button>
-            <button type="button" class="quick-cmd-btn" data-quick-cmd="stack">stack</button>
-            <button type="button" class="quick-cmd-btn" data-quick-cmd="pm">pm</button>
-            <button type="button" class="quick-cmd-btn" data-quick-cmd="contact">contact</button>
-            <button type="button" class="quick-cmd-btn" data-quick-cmd="clear">clear</button>
-            <button type="button" class="quick-cmd-btn quick-exit" data-quick-cmd="exit">exit</button>
-          </div>
-          <form class="prompt-form" data-command-form>
-            <label for="command-input">$</label>
-            <input id="command-input" name="command" type="text" autocomplete="off" spellcheck="false" placeholder="type a command (or tap above)">
-            <button type="submit">run</button>
-          </form>
-        </div>
-      </div>
-
-      <button class="floating-cli-toggle" type="button" data-cli-toggle aria-label="Toggle terminal shell" aria-expanded="false">
-        <span class="prompt-symbol" aria-hidden="true">&gt;_</span>
-        <span class="toggle-text">terminal</span>
-      </button>
-    </div>
 
     <script src="script.js"></script>
   </body>

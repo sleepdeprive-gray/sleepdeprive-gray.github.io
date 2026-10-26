@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Software Development portfolio of Ivan Parales Duran — Backend Engines, Microservices, Stacks, Skills and Tooling.">
+    <title>Software Development | Ivan Parales Duran</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <!-- Left-Stuck Side Navigation Dock (Zero Left Gap) -->
+    <aside class="side-nav-dock" data-side-nav aria-label="Main Navigation">
+      <nav class="side-nav-rail">
+        <!-- Item 1: Home -->
+        <a href="index.html" class="side-nav-item" data-page="home" aria-label="Go to Home">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </span>
+          <span class="nav-label">Home</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Item 2: Web Development -->
+        <a href="web-development.html" class="side-nav-item" data-page="web-development" aria-label="Go to Web Development">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="3" rx="2"/>
+              <line x1="8" x2="16" y1="21" y2="21"/>
+              <line x1="12" x2="12" y1="17" y2="21"/>
+            </svg>
+          </span>
+          <span class="nav-label">Web Development</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Item 3: Software Development (Active) -->
+        <a href="software-development.html" class="side-nav-item is-active" data-page="software-development" aria-label="Software Development Page">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+              <line x1="14" x2="10" y1="4" y2="20"/>
+            </svg>
+          </span>
+          <span class="nav-label">Software Development</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Item 4: Project Management -->
+        <a href="project-management.html" class="side-nav-item" data-page="project-management" aria-label="Go to Project Management">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+          </span>
+          <span class="nav-label">Project Management</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Item 5: Sales & Marketing -->
+        <a href="sales-marketing.html" class="side-nav-item" data-page="sales-marketing" aria-label="Go to Sales & Marketing">
+          <span class="nav-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </span>
+          <span class="nav-label">Sales &amp; Marketing</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Top Minimalist Header -->
+    <header class="site-header" data-header>
+      <div class="header-inner">
+        <a class="brand-title" href="index.html" aria-label="Ivan Parales Duran portfolio home">
+          <img src="assets/logo.svg" alt="Ivan Logo" class="brand-logo" width="28" height="28">
+          <span class="brand-bold">Ivan Parales Duran</span>
+        </a>
+
+        <div class="header-right-actions">
+          <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark and light theme">
+            <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-wrapper" id="main-content">
+      <section class="editorial-section">
+        <!-- Hero Banner -->
+        <div class="discipline-hero-banner">
+          <span class="section-kicker">Discipline 02</span>
+          <h1 class="discipline-page-title">Software Development</h1>
+          <p class="discipline-page-summary">
+            Engineering backend engines, asynchronous microservices, and distributed systems built for scale and reliability.
+          </p>
+        </div>
+
+        <!-- Software Projects (2-Column Grid) -->
+        <div class="discipline-row-block">
+          <h2 class="block-heading">Software Engineering Projects</h2>
+          <div class="editorial-projects-grid">
+            <article class="editorial-project-card">
+              <a href="https://github.com/sleepdeprive-gray/iTrack-Async" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit iTrack Async Worker repository">
+                <div class="project-img-frame">
+                  <img src="assets/itrack-async.PNG" alt="iTrack Async Service Worker" loading="lazy">
+                  <div class="project-hover-overlay"><span>Backend Pipeline ↗</span></div>
+                </div>
+              </a>
+              <div class="project-info-under">
+                <h3 class="project-card-title">iTrack Async Worker &amp; Queue Service</h3>
+                <p class="project-card-desc">Asynchronous backend pipeline engineered for batch state transitions, notifications, and concurrency.</p>
+                <div class="project-btn-row">
+                  <a href="https://github.com/sleepdeprive-gray/iTrack-Async" target="_blank" rel="noreferrer" class="btn-project-action">Source Code →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="editorial-project-card">
+              <a href="https://nemo-v1.netlify.app/" target="_blank" rel="noreferrer" class="project-img-link" aria-label="Visit Nemo Cloud Storage Engine">
+                <div class="project-img-frame">
+                  <img src="assets/nemo.PNG" alt="Nemo Distributed Storage Engine" loading="lazy">
+                  <div class="project-hover-overlay"><span>Cloud Storage ↗</span></div>
+                </div>
+              </a>
+              <div class="project-info-under">
+                <h3 class="project-card-title">Nemo Distributed Object Storage Layer</h3>
+                <p class="project-card-desc">Storage abstraction engine providing unified API primitives for blob uploads, mime verification, and directory trees.</p>
+                <div class="project-btn-row">
+                  <a href="https://nemo-v1.netlify.app/" target="_blank" rel="noreferrer" class="btn-project-action">Live Engine →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- 1. STACK (Line 1: Gauge Meters with Logos) -->
+        <div class="discipline-row-block">
+          <h2 class="block-heading">Stacks &amp; Core Technologies</h2>
+          <div class="gauge-list">
+            <!-- Python -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Python 3.10+</span>
+                  <span class="gauge-subtitle">FastAPI, Pydantic, Asyncio &amp; Scripting</span>
+                </div>
+                <span class="gauge-value-pill">86%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 86%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PHP & Laravel -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">PHP 8.2+</span>
+                  <span class="gauge-subtitle">Laravel Ecosystem, Horizon Workers &amp; Queue Pipelines</span>
+                </div>
+                <span class="gauge-value-pill">88%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 88%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- MySQL -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">MySQL Relational Engine</span>
+                  <span class="gauge-subtitle">ACID Transactions, Complex Joins, Index Optimization &amp; Schema Design</span>
+                </div>
+                <span class="gauge-value-pill">90%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 90%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Redis -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/redis/DC382D" alt="Redis" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Redis</span>
+                  <span class="gauge-subtitle">In-Memory Key-Value Caching, Rate Limiting &amp; Pub/Sub Streaming</span>
+                </div>
+                <span class="gauge-value-pill">78%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 78%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Linux -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Linux &amp; Shell Scripting</span>
+                  <span class="gauge-subtitle">Systemd Services, Cron Jobs, SSH Management &amp; Bash Utilities</span>
+                </div>
+                <span class="gauge-value-pill">84%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 84%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. APPLICATIONS (Line 2: Gauge Meters with Logos) -->
+        <div class="discipline-row-block">
+          <h2 class="block-heading">Applications &amp; Tooling</h2>
+          <div class="gauge-list">
+            <!-- VS Code -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">VS Code / Antigravity</span>
+                  <span class="gauge-subtitle">Primary IDE, Interactive Debugging &amp; Python Language Server</span>
+                </div>
+                <span class="gauge-value-pill">95%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 95%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Postman -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Postman API Platform</span>
+                  <span class="gauge-subtitle">Automated Test Suites, Mock Servers &amp; API Regression Verification</span>
+                </div>
+                <span class="gauge-value-pill">92%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 92%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Git -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Git &amp; GitHub CLI</span>
+                  <span class="gauge-subtitle">Trunk-Based Version Control, Rebase, PR Reviews &amp; Semantic Releases</span>
+                </div>
+                <span class="gauge-value-pill">88%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 88%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Docker -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Docker Desktop</span>
+                  <span class="gauge-subtitle">Containerized Development Runtimes, Multi-Stage Builds &amp; Compose</span>
+                </div>
+                <span class="gauge-value-pill">78%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 78%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal / SSH -->
+            <div class="gauge-line-item">
+              <div class="gauge-header-row">
+                <div class="gauge-title-group">
+                  <span class="gauge-logo-box">
+                    <img src="https://cdn.simpleicons.org/gnometerminal/white" alt="Terminal" class="gauge-logo">
+                  </span>
+                  <span class="gauge-label">Unix Terminal &amp; OpenSSH</span>
+                  <span class="gauge-subtitle">Remote Server Administration, Key Provisioning &amp; Process Monitoring</span>
+                </div>
+                <span class="gauge-value-pill">85%</span>
+              </div>
+              <div class="gauge-bar-container">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="width: 85%;"></div>
+                </div>
+                <div class="gauge-markers">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. SKILLS (Line 3: Feature Cards) -->
+        <div class="discipline-row-block">
+          <h2 class="block-heading">Engineering Skills</h2>
+          <div class="skills-cards-grid">
+            <div class="skill-feature-card">
+              <h4>Clean Architecture &amp; SOLID</h4>
+              <p>Modular micro-component design, separation of concerns, DRY principles, and maintainable layered software abstractions.</p>
+            </div>
+            <div class="skill-feature-card">
+              <h4>Concurrency &amp; Async I/O</h4>
+              <p>Non-blocking event loop execution, job queues, thread decoupling, and asynchronous worker orchestration.</p>
+            </div>
+            <div class="skill-feature-card">
+              <h4>API Contract Design &amp; Schemas</h4>
+              <p>Strict type validation with Pydantic, OpenAPI/Swagger specifications, and backwards-compatible endpoint evolution.</p>
+            </div>
+            <div class="skill-feature-card">
+              <h4>Database Tuning &amp; Indexing</h4>
+              <p>Query profiling with EXPLAIN, composite indexes, connection pooling, and optimized ACID transactional workflows.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. CERTIFICATIONS (Showing Sample Certificate Picture) -->
+        <div class="discipline-row-block">
+          <h2 class="block-heading">Software Engineering Certifications</h2>
+          <div class="cert-picture-grid">
+            <!-- Cert 1: CCNA -->
+            <article class="cert-picture-card">
+              <div class="cert-frame-preview">
+                <div class="sample-cert-sheet">
+                  <span class="cert-sample-badge">Verified Credential</span>
+                  <div class="cert-sheet-top">
+                    <svg class="cert-sheet-crest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect width="18" height="18" x="3" y="3" rx="2"/>
+                      <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="cert-sheet-org">Cisco Networking Academy</span>
+                  </div>
+                  <div class="cert-sheet-mid">
+                    <div class="cert-sheet-cert-title">Cisco Certified Network Associate (CCNA)</div>
+                    <div class="cert-sheet-recipient">Conferred to Ivan Parales Duran</div>
+                  </div>
+                  <div class="cert-sheet-bottom">
+                    <span class="cert-sheet-seal-badge">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                      </svg>
+                      Verified Curriculum
+                    </span>
+                    <span class="cert-sheet-id">CISCO-CCNA-8924</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cert-picture-meta">
+                <h3 class="cert-picture-title">Cisco Certified Network Associate (CCNA) Curriculum</h3>
+                <p class="cert-picture-desc">Comprehensive routing protocols, subnets, OSI layer architecture, switching loops, and TCP/IP networking security foundations.</p>
+                <div class="cert-picture-footer">
+                  <span class="cert-tag">Systems &amp; Network</span>
+                  <span class="cert-year">2026</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Cert 2: Cum Laude -->
+            <article class="cert-picture-card">
+              <div class="cert-frame-preview">
+                <div class="sample-cert-sheet">
+                  <span class="cert-sample-badge">Academic Distinction</span>
+                  <div class="cert-sheet-top">
+                    <svg class="cert-sheet-crest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="cert-sheet-org">University Academic Board</span>
+                  </div>
+                  <div class="cert-sheet-mid">
+                    <div class="cert-sheet-cert-title">Bachelor of Science in Information Technology</div>
+                    <div class="cert-sheet-recipient">Conferred Cum Laude to Ivan Parales Duran</div>
+                  </div>
+                  <div class="cert-sheet-bottom">
+                    <span class="cert-sheet-seal-badge">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                      </svg>
+                      Honors Graduate
+                    </span>
+                    <span class="cert-sheet-id">DEGREE-CL-2026</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cert-picture-meta">
+                <h3 class="cert-picture-title">BS Information Technology (Cum Laude Distinction)</h3>
+                <p class="cert-picture-desc">Academic excellence across algorithm design, computational theory, database systems, distributed networks, and modern software engineering.</p>
+                <div class="cert-picture-footer">
+                  <span class="cert-tag">Computer Science</span>
+                  <span class="cert-year">2026</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Contact & Footer -->
+        <div class="contact-block" id="contact">
+          <div class="contact-editorial-content">
+            <span class="contact-eyebrow">Get in touch</span>
+            <h2 class="contact-huge-title">Have a software project in mind?<br>Let's build reliable software.</h2>
+            <div class="contact-btn-cloud">
+              <a href="mailto:ayban.duran@gmail.com" class="btn-editorial-solid"><span>ayban.duran@gmail.com ↗</span></a>
+              <a href="https://wa.me/639919048089" target="_blank" rel="noreferrer" class="btn-editorial-outline"><span>WhatsApp (+63 991 904 8089) ↗</span></a>
+              <a href="https://www.linkedin.com/in/duran-ivan/" target="_blank" rel="noreferrer" class="btn-editorial-outline"><span>LinkedIn ↗</span></a>
+              <a href="https://github.com/sleepdeprive-gray" target="_blank" rel="noreferrer" class="btn-editorial-outline"><span>GitHub ↗</span></a>
+            </div>
+          </div>
+          <div class="minimal-footer-line">
+            <span>© <span data-year>2026</span> Ivan Parales Duran. All rights reserved.</span>
+            <span>Cum Laude BS IT · Full Stack Engineer &amp; Project Lead</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
